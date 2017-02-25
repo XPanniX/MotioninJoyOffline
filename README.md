@@ -1,5 +1,5 @@
-# MotioninJoy Offline
-Use your PS3 Controller on your PC.  
+## MotioninJoy Offline
+*Use your PS3 Controller on your PC.*
 
 ---
 
@@ -20,3 +20,5 @@ Use your PS3 Controller on your PC.
 6. Click the `Load driver` button
 7. If loading gets stuck at `INFO:RETURN: DriverPackageInstallW (0xE0000247)` set your Computers date to 2014 and try again
 8. To emulate a Xbox Gamepad go back to the Profiles Tab, select `Xbox 360 Emulator` and click the `Enable` button in the bottom left
+
+---
