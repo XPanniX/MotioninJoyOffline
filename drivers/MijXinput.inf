@@ -1,0 +1,839 @@
+;/*++
+;
+;Copyright (c) 2009-2009 MotioninJoy.com All rights Reserved
+;
+;Module Name:
+;
+;    MijXinput.INF
+;
+;Abstract:
+;    INF file for installing Dualshock 3 device drivers
+;    This file is dependant on wdffeatured.inf
+;
+;--*/
+
+[Version]
+Signature	= "$WINDOWS NT$"
+Class		= XnaComposite
+ClassGUID	= {D61CA365-5AF4-4486-998B-9DB4734C6CA3}
+Provider	= %MIJ%
+CatalogFile	= MijXinput.cat
+DriverVer	= 11/10/2011,0.6.0005.00000
+
+; ================= Class section =====================
+[ClassInstall32]
+AddReg=XnaComposite_AddReg
+ 
+[XnaComposite_AddReg]
+HKR,,,,%XUSB21.ClassName%
+HKR,,Icon,,-24
+
+;**************************************************
+; MotioninJoy Xinput DeviceSource file information
+;**************************************************
+
+[SourceDisksNames]
+1=%MotioninJoy.DiskName%
+
+[SourceDisksFiles.x86]
+xusb21.sys		=1,x86
+MijXfilt.sys         	=1,x86
+WdfCoInstaller01009.dll	=1,x86
+
+
+[SourceDisksFiles.amd64]
+xusb21.sys		=1,x64
+MijXfilt.sys         	=1,x64
+WdfCoInstaller01009.dll	=1,x64
+
+[ControlFlags]
+ExcludeFromSelect=*
+
+[DestinationDirs]
+DefaultDestDir=12
+CC_Install_CoInstaller_CopyFiles=11
+
+;*****************************************
+; MotioninJoy Xinput Device Install Section
+;*****************************************
+
+[Manufacturer]
+%MIJ%=MotioninJoy,NTx86,NTamd64,NTx86.6.0,NTamd64.6.0
+
+[MotioninJoy.NTx86.6.0]
+
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_0268
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_03A0
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_03B4
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_03D5
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_042F
+;xbox controller
+%MIJ.DeviceName%=CC_Install, USB\VID_044F&PID_0F07		; Thrustmaster Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0202		; Microsoft Xbox Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0285		; Microsoft Xbox Controller S
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0289		; Microsoft Xbox Controller S
+%MIJ.DeviceName%=CC_Install, USB\VID_05FE&PID_3030		; Chic Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_05FE&PID_3031		; Chic Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4516		; Mad Catz 4516
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4520		; Mad Catz Control Pad Pro
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4526		; Mad Catz 4526
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4536		; Mad Catz Microcon Xbox Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4556		; Mad Catz Lynx Wireless Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4588		; Mad Catz Blaster
+%MIJ.DeviceName%=CC_Install, USB\VID_0C12&PID_8802		; Nyko Air Flow
+%MIJ.DeviceName%=CC_Install, USB\VID_0E6F&PID_0008		; After Glow Pro Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0F30&PID_0202		; Big Ben XS XBox Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0E8F&PID_0201		; Gamexpert PS2/GC/Xbox Steering Wheel
+%MIJ.DeviceName%=CC_Install, USB\VID_12AB&PID_8809		; Konami DDR Pad
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4540		; Mad Catz Beat Pad (w/ Handle)
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_45FF		; Mad Catz Beat Pad (w/ Handle)
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_6040		; Mad Catz Beat Pad Pro
+%MIJ.DeviceName%=CC_Install, USB\VID_0C12&PID_8809		; RedOctane Ignition Pad
+
+;general gamepad
+%MIJ.DeviceName%=CC_Install, USB\VID_0079&PID_0006		; 
+%MIJ.DeviceName%=CC_Install, USB\VID_0E8f&PID_0003		; BTP-C036
+%MIJ.DeviceName%=CC_Install, USB\VID_11FF&PID_3341		; e-pxn PXN-8601/8633
+%MIJ.DeviceName%=CC_Install, USB\VID_12BD&PID_C003		; Betop BTP-2188
+%MIJ.DeviceName%=CC_Install, USB\VID_146B&PID_0302		; BTP-2169
+%MIJ.DeviceName%=CC_Install, USB\VID_8380&PID_2165		; Betop BTP-2165
+%MIJ.DeviceName%=CC_Install, USB\VID_8380&PID_2188		; BTP-2186
+
+;BLUETOOTH DONGLE
+%MIJ.DeviceName%=CC_Install, USB\VID_03EE&PID_641F
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_0862
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_171D
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_231D
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_D004
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_D404
+%MIJ.DeviceName%=CC_Install, USB\VID_044E&PID_300D
+%MIJ.DeviceName%=CC_Install, USB\VID_044E&PID_3017
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_007E
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_009C
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0708
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0715
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0719
+%MIJ.DeviceName%=CC_Install, USB\VID_0461&PID_4D6A
+%MIJ.DeviceName%=CC_Install, USB\VID_0461&PID_4D75
+%MIJ.DeviceName%=CC_Install, USB\VID_047D&PID_105D
+%MIJ.DeviceName%=CC_Install, USB\VID_047D&PID_105E
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E00D
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E00F
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E010
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E011
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E02C
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0013
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0017
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0081
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0084
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0012
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0121
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0131
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_016A
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_042F
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8206
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_820F
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8213
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8215
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8216
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8217
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8218
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_821A
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_821B
+%MIJ.DeviceName%=CC_Install, USB\VID_05E1&PID_3800
+%MIJ.DeviceName%=CC_Install, USB\VID_07D1&PID_F101
+%MIJ.DeviceName%=CC_Install, USB\VID_07D1&PID_FC01
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0200
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_020F
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0214
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0215
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0508
+%MIJ.DeviceName%=CC_Install, USB\VID_093A&PID_2510
+%MIJ.DeviceName%=CC_Install, USB\VID_0A12&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2009
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_200A
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2021
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2039
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2045
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2100
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2101
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2102
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2110
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2111
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2120
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2121
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2122
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2123
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2145
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2146
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2147
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2148
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2150
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2151
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2153
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2154
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2157
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_217F
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2198
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_219B
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_219C
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_21B1
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_21B2
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_21B4
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_4500
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_4503
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_8205
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1712
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1715
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1751
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1783
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1788
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_179C
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&Pid_B700
+%MIJ.DeviceName%=CC_Install, USB\VID_0C10&PID_0000
+%MIJ.DeviceName%=CC_Install, USB\VID_0C24&PID_0022
+%MIJ.DeviceName%=CC_Install, USB\VID_0CF3&PID_3000
+%MIJ.DeviceName%=CC_Install, USB\VID_0CF3&PID_3002
+%MIJ.DeviceName%=CC_Install, USB\VID_0CF3&PID_E019
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_3801
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_6970
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_A871
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_A970
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_A97A
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF6&PID_000B
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF6&PID_2200
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF6&PID_2208
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF7&PID_0730
+%MIJ.DeviceName%=CC_Install, USB\VID_0E5E&PID_6622
+%MIJ.DeviceName%=CC_Install, USB\VID_0E8F&PID_3075
+%MIJ.DeviceName%=CC_Install, USB\VID_1130&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_1131&PID_1001
+%MIJ.DeviceName%=CC_Install, USB\VID_1131&PID_1004
+%MIJ.DeviceName%=CC_Install, USB\VID_117F&PID_3102
+%MIJ.DeviceName%=CC_Install, USB\VID_1310&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3215
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3304
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3314
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3315
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3249
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3250
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3286
+%MIJ.DeviceName%=CC_Install, USB\VID_13DD&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_148F&PID_1000
+%MIJ.DeviceName%=CC_Install, USB\VID_148F&PID_2000
+%MIJ.DeviceName%=CC_Install, USB\VID_1690&PID_0741
+%MIJ.DeviceName%=CC_Install, USB\VID_18E8&PID_6252
+%MIJ.DeviceName%=CC_Install, USB\VID_1CAA&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_22B8&PID_0850
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_02B0
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8187
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8103
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8126
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8130
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8140
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8156
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8160
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8187
+%MIJ.DeviceName%=CC_Install, USB\VID_4851&PID_1103
+%MIJ.DeviceName%=CC_Install, USB\VID_8086&PID_0189
+
+
+
+[MotioninJoy.NTamd64.6.0]
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_0268
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_03A0
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_03B4
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_03D5
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_042F
+;xbox controller
+%MIJ.DeviceName%=CC_Install, USB\VID_044F&PID_0F07		; Thrustmaster Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0202		; Microsoft Xbox Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0285		; Microsoft Xbox Controller S
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0289		; Microsoft Xbox Controller S
+%MIJ.DeviceName%=CC_Install, USB\VID_05FE&PID_3030		; Chic Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_05FE&PID_3031		; Chic Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4516		; Mad Catz 4516
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4520		; Mad Catz Control Pad Pro
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4526		; Mad Catz 4526
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4536		; Mad Catz Microcon Xbox Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4556		; Mad Catz Lynx Wireless Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4588		; Mad Catz Blaster
+%MIJ.DeviceName%=CC_Install, USB\VID_0C12&PID_8802		; Nyko Air Flow
+%MIJ.DeviceName%=CC_Install, USB\VID_0E6F&PID_0008		; After Glow Pro Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0F30&PID_0202		; Big Ben XS XBox Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0E8F&PID_0201		; Gamexpert PS2/GC/Xbox Steering Wheel
+%MIJ.DeviceName%=CC_Install, USB\VID_12AB&PID_8809		; Konami DDR Pad
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4540		; Mad Catz Beat Pad (w/ Handle)
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_45FF		; Mad Catz Beat Pad (w/ Handle)
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_6040		; Mad Catz Beat Pad Pro
+%MIJ.DeviceName%=CC_Install, USB\VID_0C12&PID_8809		; RedOctane Ignition Pad
+
+%MIJ.DeviceName%=CC_Install, USB\VID_0079&PID_0006		; 
+%MIJ.DeviceName%=CC_Install, USB\VID_0E8f&PID_0003		; BTP-C036
+%MIJ.DeviceName%=CC_Install, USB\VID_11FF&PID_3341		; e-pxn PXN-8601/8633
+%MIJ.DeviceName%=CC_Install, USB\VID_12BD&PID_C003		; Betop BTP-2188
+%MIJ.DeviceName%=CC_Install, USB\VID_146B&PID_0302		; BTP-2169
+%MIJ.DeviceName%=CC_Install, USB\VID_8380&PID_2165		; Betop BTP-2165
+%MIJ.DeviceName%=CC_Install, USB\VID_8380&PID_2188		; BTP-2186
+
+;BLUETOOTH DONGLE
+%MIJ.DeviceName%=CC_Install, USB\VID_03EE&PID_641F
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_0862
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_171D
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_231D
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_D004
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_D404
+%MIJ.DeviceName%=CC_Install, USB\VID_044E&PID_300D
+%MIJ.DeviceName%=CC_Install, USB\VID_044E&PID_3017
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_007E
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_009C
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0708
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0715
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0719
+%MIJ.DeviceName%=CC_Install, USB\VID_0461&PID_4D6A
+%MIJ.DeviceName%=CC_Install, USB\VID_0461&PID_4D75
+%MIJ.DeviceName%=CC_Install, USB\VID_047D&PID_105D
+%MIJ.DeviceName%=CC_Install, USB\VID_047D&PID_105E
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E00D
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E00F
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E010
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E011
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E02C
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0013
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0017
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0081
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0084
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0012
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0121
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0131
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_016A
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_042F
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8206
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_820F
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8213
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8215
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8216
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8217
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8218
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_821A
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_821B
+%MIJ.DeviceName%=CC_Install, USB\VID_05E1&PID_3800
+%MIJ.DeviceName%=CC_Install, USB\VID_07D1&PID_F101
+%MIJ.DeviceName%=CC_Install, USB\VID_07D1&PID_FC01
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0200
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_020F
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0214
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0215
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0508
+%MIJ.DeviceName%=CC_Install, USB\VID_093A&PID_2510
+%MIJ.DeviceName%=CC_Install, USB\VID_0A12&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2009
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_200A
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2021
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2039
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2045
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2100
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2101
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2102
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2110
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2111
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2120
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2121
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2122
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2123
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2145
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2146
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2147
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2148
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2150
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2151
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2153
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2154
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2157
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_217F
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2198
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_219B
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_219C
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_21B1
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_21B2
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_21B4
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_4500
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_4503
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_8205
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1712
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1715
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1751
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1783
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1788
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_179C
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&Pid_B700
+%MIJ.DeviceName%=CC_Install, USB\VID_0C10&PID_0000
+%MIJ.DeviceName%=CC_Install, USB\VID_0C24&PID_0022
+%MIJ.DeviceName%=CC_Install, USB\VID_0CF3&PID_3000
+%MIJ.DeviceName%=CC_Install, USB\VID_0CF3&PID_3002
+%MIJ.DeviceName%=CC_Install, USB\VID_0CF3&PID_E019
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_3801
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_6970
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_A871
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_A970
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_A97A
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF6&PID_000B
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF6&PID_2200
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF6&PID_2208
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF7&PID_0730
+%MIJ.DeviceName%=CC_Install, USB\VID_0E5E&PID_6622
+%MIJ.DeviceName%=CC_Install, USB\VID_0E8F&PID_3075
+%MIJ.DeviceName%=CC_Install, USB\VID_1130&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_1131&PID_1001
+%MIJ.DeviceName%=CC_Install, USB\VID_1131&PID_1004
+%MIJ.DeviceName%=CC_Install, USB\VID_117F&PID_3102
+%MIJ.DeviceName%=CC_Install, USB\VID_1310&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3215
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3304
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3314
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3315
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3249
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3250
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3286
+%MIJ.DeviceName%=CC_Install, USB\VID_13DD&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_148F&PID_1000
+%MIJ.DeviceName%=CC_Install, USB\VID_148F&PID_2000
+%MIJ.DeviceName%=CC_Install, USB\VID_1690&PID_0741
+%MIJ.DeviceName%=CC_Install, USB\VID_18E8&PID_6252
+%MIJ.DeviceName%=CC_Install, USB\VID_1CAA&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_22B8&PID_0850
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_02B0
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8187
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8103
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8126
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8130
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8140
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8156
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8160
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8187
+%MIJ.DeviceName%=CC_Install, USB\VID_4851&PID_1103
+%MIJ.DeviceName%=CC_Install, USB\VID_8086&PID_0189
+
+[MotioninJoy.NTx86]
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_0268
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_03A0
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_03B4
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_03D5
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_042F
+;xbox controller
+%MIJ.DeviceName%=CC_Install, USB\VID_044F&PID_0F07		; Thrustmaster Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0202		; Microsoft Xbox Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0285		; Microsoft Xbox Controller S
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0289		; Microsoft Xbox Controller S
+%MIJ.DeviceName%=CC_Install, USB\VID_05FE&PID_3030		; Chic Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_05FE&PID_3031		; Chic Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4516		; Mad Catz 4516
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4520		; Mad Catz Control Pad Pro
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4526		; Mad Catz 4526
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4536		; Mad Catz Microcon Xbox Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4556		; Mad Catz Lynx Wireless Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4588		; Mad Catz Blaster
+%MIJ.DeviceName%=CC_Install, USB\VID_0C12&PID_8802		; Nyko Air Flow
+%MIJ.DeviceName%=CC_Install, USB\VID_0E6F&PID_0008		; After Glow Pro Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0F30&PID_0202		; Big Ben XS XBox Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0E8F&PID_0201		; Gamexpert PS2/GC/Xbox Steering Wheel
+%MIJ.DeviceName%=CC_Install, USB\VID_12AB&PID_8809		; Konami DDR Pad
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4540		; Mad Catz Beat Pad (w/ Handle)
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_45FF		; Mad Catz Beat Pad (w/ Handle)
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_6040		; Mad Catz Beat Pad Pro
+%MIJ.DeviceName%=CC_Install, USB\VID_0C12&PID_8809		; RedOctane Ignition Pad
+
+%MIJ.DeviceName%=CC_Install, USB\VID_0079&PID_0006		; 
+%MIJ.DeviceName%=CC_Install, USB\VID_0E8f&PID_0003		; BTP-C036
+%MIJ.DeviceName%=CC_Install, USB\VID_11FF&PID_3341		; e-pxn PXN-8601/8633
+%MIJ.DeviceName%=CC_Install, USB\VID_12BD&PID_C003		; Betop BTP-2188
+%MIJ.DeviceName%=CC_Install, USB\VID_146B&PID_0302		; BTP-2169
+%MIJ.DeviceName%=CC_Install, USB\VID_8380&PID_2165		; Betop BTP-2165
+%MIJ.DeviceName%=CC_Install, USB\VID_8380&PID_2188		; BTP-2186
+
+;BLUETOOTH DONGLE
+%MIJ.DeviceName%=CC_Install, USB\VID_03EE&PID_641F
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_0862
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_171D
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_231D
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_D004
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_D404
+%MIJ.DeviceName%=CC_Install, USB\VID_044E&PID_300D
+%MIJ.DeviceName%=CC_Install, USB\VID_044E&PID_3017
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_007E
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_009C
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0708
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0715
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0719
+%MIJ.DeviceName%=CC_Install, USB\VID_0461&PID_4D6A
+%MIJ.DeviceName%=CC_Install, USB\VID_0461&PID_4D75
+%MIJ.DeviceName%=CC_Install, USB\VID_047D&PID_105D
+%MIJ.DeviceName%=CC_Install, USB\VID_047D&PID_105E
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E00D
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E00F
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E010
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E011
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E02C
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0013
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0017
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0081
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0084
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0012
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0121
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0131
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_016A
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_042F
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8206
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_820F
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8213
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8215
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8216
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8217
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8218
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_821A
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_821B
+%MIJ.DeviceName%=CC_Install, USB\VID_05E1&PID_3800
+%MIJ.DeviceName%=CC_Install, USB\VID_07D1&PID_F101
+%MIJ.DeviceName%=CC_Install, USB\VID_07D1&PID_FC01
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0200
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_020F
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0214
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0215
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0508
+%MIJ.DeviceName%=CC_Install, USB\VID_093A&PID_2510
+%MIJ.DeviceName%=CC_Install, USB\VID_0A12&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2009
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_200A
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2021
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2039
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2045
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2100
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2101
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2102
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2110
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2111
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2120
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2121
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2122
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2123
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2145
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2146
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2147
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2148
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2150
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2151
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2153
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2154
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2157
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_217F
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2198
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_219B
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_219C
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_21B1
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_21B2
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_21B4
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_4500
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_4503
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_8205
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1712
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1715
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1751
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1783
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1788
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_179C
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&Pid_B700
+%MIJ.DeviceName%=CC_Install, USB\VID_0C10&PID_0000
+%MIJ.DeviceName%=CC_Install, USB\VID_0C24&PID_0022
+%MIJ.DeviceName%=CC_Install, USB\VID_0CF3&PID_3000
+%MIJ.DeviceName%=CC_Install, USB\VID_0CF3&PID_3002
+%MIJ.DeviceName%=CC_Install, USB\VID_0CF3&PID_E019
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_3801
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_6970
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_A871
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_A970
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_A97A
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF6&PID_000B
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF6&PID_2200
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF6&PID_2208
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF7&PID_0730
+%MIJ.DeviceName%=CC_Install, USB\VID_0E5E&PID_6622
+%MIJ.DeviceName%=CC_Install, USB\VID_0E8F&PID_3075
+%MIJ.DeviceName%=CC_Install, USB\VID_1130&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_1131&PID_1001
+%MIJ.DeviceName%=CC_Install, USB\VID_1131&PID_1004
+%MIJ.DeviceName%=CC_Install, USB\VID_117F&PID_3102
+%MIJ.DeviceName%=CC_Install, USB\VID_1310&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3215
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3304
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3314
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3315
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3249
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3250
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3286
+%MIJ.DeviceName%=CC_Install, USB\VID_13DD&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_148F&PID_1000
+%MIJ.DeviceName%=CC_Install, USB\VID_148F&PID_2000
+%MIJ.DeviceName%=CC_Install, USB\VID_1690&PID_0741
+%MIJ.DeviceName%=CC_Install, USB\VID_18E8&PID_6252
+%MIJ.DeviceName%=CC_Install, USB\VID_1CAA&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_22B8&PID_0850
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_02B0
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8187
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8103
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8126
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8130
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8140
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8156
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8160
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8187
+%MIJ.DeviceName%=CC_Install, USB\VID_4851&PID_1103
+%MIJ.DeviceName%=CC_Install, USB\VID_8086&PID_0189
+
+
+[MotioninJoy.NTamd64]
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_0268
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_03A0
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_03B4
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_03D5
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_042F
+;xbox controller
+%MIJ.DeviceName%=CC_Install, USB\VID_044F&PID_0F07		; Thrustmaster Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0202		; Microsoft Xbox Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0285		; Microsoft Xbox Controller S
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0289		; Microsoft Xbox Controller S
+%MIJ.DeviceName%=CC_Install, USB\VID_05FE&PID_3030		; Chic Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_05FE&PID_3031		; Chic Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4516		; Mad Catz 4516
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4520		; Mad Catz Control Pad Pro
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4526		; Mad Catz 4526
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4536		; Mad Catz Microcon Xbox Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4556		; Mad Catz Lynx Wireless Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4588		; Mad Catz Blaster
+%MIJ.DeviceName%=CC_Install, USB\VID_0C12&PID_8802		; Nyko Air Flow
+%MIJ.DeviceName%=CC_Install, USB\VID_0E6F&PID_0008		; After Glow Pro Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0F30&PID_0202		; Big Ben XS XBox Controller
+%MIJ.DeviceName%=CC_Install, USB\VID_0E8F&PID_0201		; Gamexpert PS2/GC/Xbox Steering Wheel
+%MIJ.DeviceName%=CC_Install, USB\VID_12AB&PID_8809		; Konami DDR Pad
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_4540		; Mad Catz Beat Pad (w/ Handle)
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_45FF		; Mad Catz Beat Pad (w/ Handle)
+%MIJ.DeviceName%=CC_Install, USB\VID_0738&PID_6040		; Mad Catz Beat Pad Pro
+%MIJ.DeviceName%=CC_Install, USB\VID_0C12&PID_8809		; RedOctane Ignition Pad
+
+%MIJ.DeviceName%=CC_Install, USB\VID_0079&PID_0006		; 
+%MIJ.DeviceName%=CC_Install, USB\VID_0E8f&PID_0003		; BTP-C036
+%MIJ.DeviceName%=CC_Install, USB\VID_11FF&PID_3341		; e-pxn PXN-8601/8633
+%MIJ.DeviceName%=CC_Install, USB\VID_12BD&PID_C003		; Betop BTP-2188
+%MIJ.DeviceName%=CC_Install, USB\VID_146B&PID_0302		; BTP-2169
+%MIJ.DeviceName%=CC_Install, USB\VID_8380&PID_2165		; Betop BTP-2165
+%MIJ.DeviceName%=CC_Install, USB\VID_8380&PID_2188		; BTP-2186
+
+;BLUETOOTH DONGLE
+%MIJ.DeviceName%=CC_Install, USB\VID_03EE&PID_641F
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_0862
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_171D
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_231D
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_D004
+%MIJ.DeviceName%=CC_Install, USB\VID_03F0&PID_D404
+%MIJ.DeviceName%=CC_Install, USB\VID_044E&PID_300D
+%MIJ.DeviceName%=CC_Install, USB\VID_044E&PID_3017
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_007E
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_009C
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0708
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0715
+%MIJ.DeviceName%=CC_Install, USB\VID_045E&PID_0719
+%MIJ.DeviceName%=CC_Install, USB\VID_0461&PID_4D6A
+%MIJ.DeviceName%=CC_Install, USB\VID_0461&PID_4D75
+%MIJ.DeviceName%=CC_Install, USB\VID_047D&PID_105D
+%MIJ.DeviceName%=CC_Install, USB\VID_047D&PID_105E
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E00D
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E00F
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E010
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E011
+%MIJ.DeviceName%=CC_Install, USB\VID_0489&PID_E02C
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0013
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0017
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0081
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0084
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0012
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0121
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_0131
+%MIJ.DeviceName%=CC_Install, USB\VID_050D&PID_016A
+%MIJ.DeviceName%=CC_Install, USB\VID_054C&PID_042F
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8206
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_820F
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8213
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8215
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8216
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8217
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_8218
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_821A
+%MIJ.DeviceName%=CC_Install, USB\VID_05AC&PID_821B
+%MIJ.DeviceName%=CC_Install, USB\VID_05E1&PID_3800
+%MIJ.DeviceName%=CC_Install, USB\VID_07D1&PID_F101
+%MIJ.DeviceName%=CC_Install, USB\VID_07D1&PID_FC01
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0200
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_020F
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0214
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0215
+%MIJ.DeviceName%=CC_Install, USB\VID_0930&PID_0508
+%MIJ.DeviceName%=CC_Install, USB\VID_093A&PID_2510
+%MIJ.DeviceName%=CC_Install, USB\VID_0A12&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2009
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_200A
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2021
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2039
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2045
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2100
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2101
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2102
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2110
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2111
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2120
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2121
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2122
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2123
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2145
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2146
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2147
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2148
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2150
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2151
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2153
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2154
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2157
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_217F
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_2198
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_219B
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_219C
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_21B1
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_21B2
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_21B4
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_4500
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_4503
+%MIJ.DeviceName%=CC_Install, USB\VID_0A5C&PID_8205
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1712
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1715
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1751
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1783
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_1788
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&PID_179C
+%MIJ.DeviceName%=CC_Install, USB\VID_0B05&Pid_B700
+%MIJ.DeviceName%=CC_Install, USB\VID_0C10&PID_0000
+%MIJ.DeviceName%=CC_Install, USB\VID_0C24&PID_0022
+%MIJ.DeviceName%=CC_Install, USB\VID_0CF3&PID_3000
+%MIJ.DeviceName%=CC_Install, USB\VID_0CF3&PID_3002
+%MIJ.DeviceName%=CC_Install, USB\VID_0CF3&PID_E019
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_3801
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_6970
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_A871
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_A970
+%MIJ.DeviceName%=CC_Install, USB\VID_0DB0&PID_A97A
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF6&PID_000B
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF6&PID_2200
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF6&PID_2208
+%MIJ.DeviceName%=CC_Install, USB\VID_0DF7&PID_0730
+%MIJ.DeviceName%=CC_Install, USB\VID_0E5E&PID_6622
+%MIJ.DeviceName%=CC_Install, USB\VID_0E8F&PID_3075
+%MIJ.DeviceName%=CC_Install, USB\VID_1130&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_1131&PID_1001
+%MIJ.DeviceName%=CC_Install, USB\VID_1131&PID_1004
+%MIJ.DeviceName%=CC_Install, USB\VID_117F&PID_3102
+%MIJ.DeviceName%=CC_Install, USB\VID_1310&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3215
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3304
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3314
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3315
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3249
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3250
+%MIJ.DeviceName%=CC_Install, USB\VID_13D3&PID_3286
+%MIJ.DeviceName%=CC_Install, USB\VID_13DD&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_148F&PID_1000
+%MIJ.DeviceName%=CC_Install, USB\VID_148F&PID_2000
+%MIJ.DeviceName%=CC_Install, USB\VID_1690&PID_0741
+%MIJ.DeviceName%=CC_Install, USB\VID_18E8&PID_6252
+%MIJ.DeviceName%=CC_Install, USB\VID_1CAA&PID_0001
+%MIJ.DeviceName%=CC_Install, USB\VID_22B8&PID_0850
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_02B0
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8187
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8103
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8126
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8130
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8140
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8156
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8160
+%MIJ.DeviceName%=CC_Install, USB\VID_413C&PID_8187
+%MIJ.DeviceName%=CC_Install, USB\VID_4851&PID_1103
+%MIJ.DeviceName%=CC_Install, USB\VID_8086&PID_0189
+
+[CC_Install]
+CopyFiles=CC_Install.CopyFiles
+AddReg=CC_Install.AddReg
+
+[CC_Install.CopyFiles]
+xusb21.sys
+MijXfilt.sys
+
+[CC_Install.HW]
+AddReg = CC_Install.HW.AddReg
+
+[CC_Install.AddReg]
+ HKR,,"AudioOutTerminalType", 0x00010001, 0x00000306
+
+[CC_Install.HW.AddReg]  
+HKR,,"LowerFilters",0x00010000,"MotioninJoyXFilter"
+ 
+[CC_Install.CoInstallers]
+AddReg=CC_Install_CoInstaller_AddReg
+CopyFiles=CC_Install_CoInstaller_CopyFiles
+
+[CC_Install_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[CC_Install_CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[CC_Install.Wdf]
+KmdfService = MotioninJoyXFilter, MIJXFILT_wdfsect
+KmdfService = XUSB21, XUSB21_wdfsect
+
+[MIJXFILT_wdfsect]
+KmdfLibraryVersion = 1.9
+
+[XUSB21_wdfsect]
+KmdfLibraryVersion = 1.9
+
+
+;*****************************************
+; MotioninJoy Xinput Device Service Section
+;*****************************************
+
+[CC_Install.Services]
+AddService      = MotioninJoyXFilter,, MotioninJoyXFilter_Service_Inst 
+AddService	= xusb21,0x00000002,CC_XUSB21_Service
+
+[MotioninJoyXFilter_Service_Inst]
+DisplayName     = %MotioninJoyXFilter.ServiceName%                            
+ServiceType     = 1 ; SERVICE_KERNEL_DRIVER
+StartType       = 3 ; SERVICE_DEMAND_START
+ErrorControl    = 0 ; SERVICE_ERROR_IGNORE
+ServiceBinary   = %12%\MijXfilt.sys                            
+
+
+[CC_XUSB21_Service]
+DisplayName    = %XUSB21.ServiceName%
+ServiceType    = 1 ; SERVICE_KERNEL_DRIVER
+StartType      = 3 ; SERVICE_DEMAND_START
+ErrorControl   = 0 ; SERVICE_ERROR_IGNORE
+ServiceBinary  = %12%\xusb21.sys
+
+[Strings]
+SPSVCINST_ASSOCSERVICE		= 0x00000002
+MIJ				= "www.MotioninJoy.com"
+StdMfg				= "(Standard system devices)"
+XUSB21.ClassName		= "XBOX 360 Peripherals"
+XUSB21.DeviceName.Wired		= "Xbox 360 Controller for Windows"
+XUSB21.ServiceName               = "Xbox 360 Wireless Receiver Driver Service 21"
+MIJ.DeviceName			= "MotioninJoy Virtual Xinput device for Windows"
+MotioninJoy.DiskName		= "http://www.MotioninJoy.com"
+MotioninJoyXFilter.ServiceName	= "MotioninJoy Virtual Xinput device Filter Driver"
+

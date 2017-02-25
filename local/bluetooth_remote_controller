@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="content-language" content="en"/>
+<meta http-equiv="content-style-type" content="text/css"/>
+<meta http-equiv="imagetoolbar" content="no"/>
+<meta name="resource-type" content="document"/>
+<meta name="distribution" content="global"/>
+<meta name="copyright" content="2011 MotioninJoy Group"/>
+<meta name="keywords" content="gamepad,game,sixaxis,dualshock 3,playstation 3,Xbox 360"/>
+<meta name="description" content="Sixaxis and Dualshock 3 on Microsoft Windows quick start guide"/>
+<title>Game tools for windows</title>
+<link rel="stylesheet" type="text/css" href="misc/minify-jquery-ui-1323347558.css" /><link rel="stylesheet" type="text/css" href="misc/minify-gametool-ui-1326715515.css" /></head>
+<body>
+<div id="container">
+<div id="masthead">
+	<ul class="topnav">
+		<li><a href="index.html">Profiles</a></li>
+		<li><a href="driver_manager" name="InstallDriver" class="Elevated">Driver Manager</a></li>
+		<li><a href="bluetooth_pair">BluetoothPair</a></li>
+		<li><a href="options">Options</a></li>
+		<li><a href="about">About</a></li>
+	</ul>
+</div>
+
+
+<div id="BDRemote" class="Panel">	
+	<div id="caption"><h1></h1><button id="reload" style="width:120px; float:right;" onclick="window.location.reload()">Reload this page</button></div>
+	<div style="margin:0;padding:0;color: #00529B;background-color: #BDE5F8 background:width:100%;font-size:12px;">
+		<ol style="border: 1px solid;padding:5px 5px 5px 70px;background-repeat: no-repeat;background-position: 10px center;background-image: url('misc/images/Attention.png');color: #00529B;background-color: #BDE5F8;">
+			<li>Hold "ENTER"+"START" buttons of the Remote and click "Query Remote" button to pair.</li>
+			<li>Edit maping value ("FF" will be no function!). Refer to <a href="http://www.motioninjoy.com/wiki/en/hardware/mce_remote" target="_blank"><em><strong>MCE RC-6 Code Table</strong></em></a>.</li>
+			<li>Click "Enable" button. the maping value you have edited will be loaded automatically next time. </li>
+		</ol>
+	</div>
+<div style="font-size:12px; ">
+<table cellspacing="0" width="620px" >
+	<colgroup> 
+				<col id=""/> 
+				<col id=""/> 
+				<col id=""/> 
+				<col id=""/> 
+				<col id=""/>
+				<col id=""/>
+	</colgroup> 
+	<thead> 
+	<th width="20%">Button</th>
+	<th width="13%">Value</th>
+	<th width="20%">Button</th>
+	<th width="13%">Value</th>
+	<th width="20%">Button</th>
+	<th width="13%">Value</th>
+	</thead> 
+	<tbody> 
+	<tr  style=" height:16px;">
+	<td style="text-align:right">EJECT</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_0" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">GREEN</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_17" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">L2</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_34" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">1</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_1" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">YELLOW</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_18" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">L3</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_35" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">2</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_2" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">BLUE</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_19" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">R1</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_36" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">3</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_3" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">DISPLAY</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_20" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">R2</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_37" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">AUDIO</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_4" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">TOP MENU</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_21" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">R3</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_38" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">4</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_5" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">POPUP MENU</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_22" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">PS</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_39" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">5</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_6" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">RETURN</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_23" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">SELECT</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_40" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">6</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_7" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">TRIANGLE</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_24" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">START</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_41" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">ANGLE</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_8" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">CIRCLE</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_25" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">SCAN L</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_42" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">7</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_9" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">CROSS</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_26" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">PLAY</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_43" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">8</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_10" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">SQUARE</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_27" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">SCAN R</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_44" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">9</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_11" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">UP</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_28" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">PREV</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_45" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">SUBTITLE</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_12" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">RIGHT</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_29" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">STOP</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_46" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">CLEAR</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_13" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">DOWN</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_30" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">NEXT</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_47" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">0</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_14" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">LEFT</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_31" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">SLOW L</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_48" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">TIME</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_15" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">ENTER</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_32" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">PAUSE</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_49" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	<tr  style=" height:16px;">
+	<td style="text-align:right">RED</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_16" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;" /></td>
+	<td style="text-align:right">L1</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_33" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	<td style="text-align:right">SLOW R</td>
+	<td><input type="text" name="BD_remote" id="mcevalue_50" class="mcevalue" style="font-family: Fixedsys;width:30px; height:16px;text-align:right;"/></td>
+	</tr>
+	</tbody> 
+	</table> 
+  </div>
+	<div>
+		<button id="RemoteEnable" style="width:120px;">Enable</button>	
+		<button id="RemoteDefault" style="width:120px;">Default</button>	
+		<button id="BDInquery" style="width:120px;">Query Remote</button>	
+	</div>
+</div>
+<div id="BDInquiryDlog" style="display:none;">
+<div style="font-family:14px; ">
+<ul>
+	<li>Hold "ENTER"+"START" buttons of the Remote and wait a moment...</li>
+	<li>Click the link with some text as "BD Rmote Control" after it appear.</li>
+</ul>
+</div>
+<div id="BDDevice"></div>
+<div id="InqueryInfo"></div>
+</div>
+<div id="message" title="Exception"></div>
+</div>
+<script type="text/javascript" src="misc/jquery.js" charset="UTF-8"></script>
+<script type="text/javascript" src="misc/common.js" charset="UTF-8"></script>
+<script type="text/javascript" src="misc/bluetooth_remote_controller.js" charset="UTF-8"></script>
+</body>
+</html>

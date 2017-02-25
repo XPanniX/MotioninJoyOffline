@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="content-language" content="en"/>
+<meta http-equiv="content-style-type" content="text/css"/>
+<meta http-equiv="imagetoolbar" content="no"/>
+<meta name="resource-type" content="document"/>
+<meta name="distribution" content="global"/>
+<meta name="copyright" content="2011 MotioninJoy Group"/>
+<meta name="keywords" content="gamepad,game,sixaxis,dualshock 3,playstation 3,Xbox 360"/>
+<meta name="description" content="Sixaxis and Dualshock 3 on Microsoft Windows quick start guide"/>
+<title>Game tools for windows</title>
+<link rel="stylesheet" type="text/css" href="misc/minify-jquery-ui-1323347558.css" /><link rel="stylesheet" type="text/css" href="misc/minify-gametool-ui-1326715515.css" /></head>
+<body>
+<div id="container">
+<div id="masthead">
+	<ul class="topnav">
+		<li><a href="index.html">Profiles</a></li>
+		<li><a href="driver_manager" name="InstallDriver" class="Elevated">Driver Manager</a></li>
+		<li><a href="bluetooth_pair">BluetoothPair</a></li>
+		<li><a href="options">Options</a></li>
+		<li><a href="about">About</a></li>
+	</ul>
+</div><div id="BTFEATURE" class="Panel">	
+<div id="caption"><h1>Bluetooth Adaptor Support Features</h1><button id="reload" style="width:120px; float:right;" onclick="window.location.reload()">Reload this page</button></div>
+ <div style=" float:left;font-size:12px">
+ <table  border="0" cellspacing="1">
+			<tbody>
+
+    <tr>
+      <td id="Featureid_0" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">0.</span>3 slot packets</td>
+      <td id="Featureid_24" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">24.</span>Reserved</td>
+    </tr>
+    <tr>
+      <td id="Featureid_1" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">1.</span>5 slot packets</td>
+      <td id="Featureid_25" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">25.</span>Enhanced Data Rate ACL 2 Mbps mode</td>
+    </tr>
+    <tr>
+      <td id="Featureid_2" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">2.</span>Encryption</td>
+      <td id="Featureid_26" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">26.</span>Enhanced Data Rate ACL 3Mbps mode</td>
+    </tr>
+    <tr>
+      <td id="Featureid_3" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">3.</span>Slot offset</td>
+      <td id="Featureid_27" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">27.</span>Enhanced inquiry scan</td>
+    </tr>
+    <tr>
+      <td id="Featureid_4" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">4.</span>Timing accuracy</td>
+      <td id="Featureid_28" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">28.</span>Interlaced inquiry scan</td>
+    </tr>
+    <tr>
+      <td id="Featureid_5" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">5.</span>Role switch</td>
+      <td id="Featureid_29" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">29.</span>Interlaced page scan</td>
+    </tr>
+    <tr>
+      <td id="Featureid_6" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">6.</span>Hold mode</td>
+      <td id="Featureid_30" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">30.</span>RSSI with inquiry results</td>
+    </tr>
+    <tr>
+      <td id="Featureid_7" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">7.</span>Sniff mode</td>
+      <td id="Featureid_31" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">31.</span>Extended SCO link (EV3 packets)</td>
+    </tr>
+    <tr>
+      <td id="Featureid_8" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">8.</span>Park state</td>
+      <td id="Featureid_32" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">32.</span>EV4 packets</td>
+    </tr>
+    <tr>
+      <td id="Featureid_9" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">9.</span>Power control requests</td>
+      <td id="Featureid_33" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">33.</span>EV5 packets</td>
+    </tr>
+    <tr>
+      <td id="Featureid_10" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">10.</span>Channel quality driven data rate (CQDDR)</td>
+      <td id="Featureid_34" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">34.</span>Reserved</td>
+    </tr>
+    <tr>
+      <td id="Featureid_11" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">11.</span>SCO link</td>
+      <td id="Featureid_35" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">35.</span>AFH capable slave</td>
+    </tr>
+    <tr>
+      <td id="Featureid_12" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">12.</span>HV2 packets</td>
+      <td id="Featureid_36" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">36.</span>AFH classification slave</td>
+    </tr>
+    <tr>
+      <td id="Featureid_13" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">13.</span>HV3 packets</td>
+      <td id="Featureid_37" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">37.</span>Reserved</td>
+    </tr>
+    <tr>
+      <td id="Featureid_14" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">14.</span>μ-law log synchronous data</td>
+      <td id="Featureid_38" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">38.</span>Reserved</td>
+    </tr>
+    <tr>
+      <td id="Featureid_15" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">15.</span>A-law log synchronous data</td>
+      <td id="Featureid_39" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">39.</span>3-slot Enhanced Data Rate ACL packets</td>
+    </tr>
+    <tr>
+      <td id="Featureid_16" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">16.</span>CVSD synchronous data</td>
+      <td id="Featureid_40" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">40.</span>5-slot Enhanced Data Rate ACL packets</td>
+    </tr>
+    <tr>
+      <td id="Featureid_17" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">17.</span>Paging parameter negotiation</td>
+      <td id="Featureid_41" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">41.</span>reserved</td>
+    </tr>
+    <tr>
+      <td id="Featureid_18" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">18.</span>Power control</td>
+      <td id="Featureid_42" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">42.</span>reserved</td>
+    </tr>
+    <tr>
+      <td id="Featureid_19" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">19.</span>Transparent synchronous data</td>
+      <td id="Featureid_43" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">43.</span>AFH capable master</td>
+    </tr>
+    <tr>
+      <td id="Featureid_20" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">20.</span>Flow control lag (least significant bit)</td>
+      <td id="Featureid_44" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">44.</span>AFH classification master</td>
+    </tr>
+    <tr>
+      <td id="Featureid_21" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">21.</span>Flow control lag (middle bit)</td>
+      <td id="Featureid_45" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">45.</span>Enhanced Data Rate eSCO 2 Mbps mode</td>
+    </tr>
+    <tr>
+      <td id="Featureid_22" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">22.</span>Flow control lag (most significant bit)</td>
+      <td id="Featureid_46" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">46.</span>Enhanced Data Rate eSCO 3 Mbps mode </td>
+    </tr>
+    <tr>
+      <td id="Featureid_23" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">23.</span>Broadcast encryption</td>
+      <td id="Featureid_47" align="right"><img src="misc/images/dunno.png" width="16" height="12"/></td>
+      <td><span style="color:#333399 ">47.</span>3-slot Enhanced Data Rate eSCO packets</td>
+    </tr>
+</tbody>
+  </table>
+ </div>
+</div>
+<div id="message" title="Exception"></div>
+</div>
+<script type="text/javascript" src="misc/jquery.js" charset="UTF-8"></script>
+<script type="text/javascript" src="misc/common.js" charset="UTF-8"></script>
+<script type="text/javascript" src="misc/bluetooth_adapter_feature.js" charset="UTF-8"></script>
+</body>
+</html>

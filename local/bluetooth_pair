@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="content-language" content="en"/>
+<meta http-equiv="content-style-type" content="text/css"/>
+<meta http-equiv="imagetoolbar" content="no"/>
+<meta name="resource-type" content="document"/>
+<meta name="distribution" content="global"/>
+<meta name="copyright" content="2011 MotioninJoy Group"/>
+<meta name="keywords" content="bluetooth adapter,game controller,Dualshock 3"/>
+<meta name="description" content="Bluetooth pair"/>
+<title>Pair Dualshock 3 to Bluetooth Adapter</title>
+<link rel="stylesheet" type="text/css" href="misc/minify-jquery-ui-1323347558.css" /><link rel="stylesheet" type="text/css" href="misc/minify-gametool-ui-1326715515.css" /></head>
+<body>
+<div id="container">
+<div id="masthead">
+	<ul class="topnav">
+		<li><a href="index.html">Profiles</a></li>
+		<li><a href="driver_manager" name="InstallDriver" class="Elevated">Driver Manager</a></li>
+		<li><a href="bluetooth_pair">BluetoothPair</a></li>
+		<li><a href="options">Options</a></li>
+		<li><a href="about">About</a></li>
+	</ul>
+		<div style="float:right;margin:22px 10px 0 0;">
+		<ul>
+			<li><p><a href="bluetooth_remote_controller" class="Elevated">PS3 BD Remote Controller pair</a></p></li>
+			<li><p><a href="bluetooth_pair_pspgo">Dualshock 3 and PSPGo Pairing</a></p></li>
+		</ul>
+		</div>
+</div><div id="BluetoothPair" class="Panel">	
+	<div id="caption"><h1>Bluetooth Pairing</h1>	<button id="reload" style="width:120px; float:right;" onclick="window.location.reload()">Reload this page</button></div>
+	<div id="BTpairing" style="margin-top:32px;">
+		<div class="controllerLists" style="padding-left:15px; ">
+			<p><label style="font-weight:bold ">Bluetooth adapter:</label></p>
+			<div id="BlueToothAdapter" class="BTAdapter">
+				<select id="AdapterList" style="width:300px; "><option value="0">Waiting for Bluetooth Adapter to be connected</option></select>
+			</div>			
+			<div style="clear:both; padding-top:10px;">
+			<input id="mode1" class="ModeSelect" type="radio" name="mode" value="0" style=" padding-top:30px;float:left;" checked="checked"/>
+
+			  <table width="400" border="1">
+				<tr>
+				  <td>Adapter MAC</td>
+				  <td><span id="BDaddr" style="color:#000088;">00.00.00.00.00.00</span></td>
+				</tr>
+				<tr>
+				  <td>Manufacturer</td>
+				  <td><span id="BDManuf" style="color:#000088;">MotioninJoy</span></td>
+				</tr>
+				<tr>
+				  <td>HCI Version</td>
+				  <td><span id="BDHCIVer" style="color:#000088;">00.0000</span></td>
+				</tr>
+				<tr>
+				  <td>LMP Version</td>
+				  <td><span id="BDLMPVer" style="color:#000088;">00.0000</span></td>
+				</tr>
+				<tr>
+				  <td>Features</td>
+				  <td><a href="bluetooth_adapter_feature">Feature List</a></td>
+				</tr>
+			  </table>
+			</div>
+			<div style="width:480px; margin-top:15px;">
+			<p><label for="mode1" class="Modeinf"><input id="mode2" class="ModeSelect" type="radio" name="mode" value="1"/>Custom MAC:</label>
+			<input type="text" id="CustomBDAddr" name="BTaddr" /></p>
+			</div>
+
+			<div id="DS3controller" style="clear:both; padding-top:15px;">
+				<p><label style="font-weight:bold ">Dualshock 3:</label></p>
+				<select id="DS3USBList" style="width:300px;"><option value="0"></option></select>
+				<div id="ds3inf">
+                <p>DS3 MAC: <span id="DS3MAC" style="color:#000088;">00.00.00.00.00.00</span></p>
+                <p>Paired to: <span id="ds3addr" style="color:#000088;">00.00.00.00.00.00</span></p>
+                </div>
+			</div>
+			</div>
+			<div style="clear:both; padding-top:10px; margin-left:15px;">
+				<button id="BTPairEnable" style="width:160px;">Pair Now</button>	
+			</div>		
+		</div>
+</div>
+<div style="display:none;">
+	<span id="NoBTAdapter">Waiting for Bluetooth Adapter to be connected</span>
+	<span id="BTAdapterName">Bluetooth Adapter</span>
+	<span id="NoDS3USB">Waiting for controller to be connected by USB</span>
+	<span id="DS3USBName">Dualshock 3 (USB)</span>
+	<span id="PS3WIRELESSKEPAD">PS3 Wireless Keypad</span>
+	<span id="PSMOVE">PS3 Motion Controller (PS MOVE)</span>
+	<span id="BTM0">Unknow</span>
+	<span id="BTM1">Ericsson Technology Licensing</span>
+	<span id="BTM2">Nokia Mobile Phones</span>
+	<span id="BTM3">Intel Corp.</span>
+	<span id="BTM4">IBM Corp.</span>
+	<span id="BTM5">Toshiba Corp.</span>
+	<span id="BTM6">3Com</span>
+	<span id="BTM7">Microsoft</span>
+	<span id="BTM8">Lucent</span>
+	<span id="BTM9">Motorola</span>
+	<span id="BTM10">Infineon Technologies AG</span>
+	<span id="BTM11">Cambridge Silicon Radio</span>
+	<span id="BTM12">Silicon Wave</span>
+	<span id="BTM13">Digianswer A/S</span>
+	<span id="BTM14">Texas Instruments Inc.</span>
+	<span id="BTM15">Parthus Technologies Inc.</span>
+	<span id="BTM16">Broadcom Corporation</span>
+	<span id="BTM17">Mitel Semiconductor</span>
+	<span id="BTM18">Widcomm, Inc.</span>
+	<span id="BTM19">Zeevo, Inc.</span>
+	<span id="BTM20">Atmel Corporation</span>
+	<span id="BTM21">Mitsubishi Electric Corporation</span>
+	<span id="BTM22">RTX Telecom A/S</span>
+	<span id="BTM23">KC Technology Inc.</span>
+	<span id="BTM24">Newlogic</span>
+	<span id="BTM25">Transilica, Inc.</span>
+	<span id="BTM26">Rohde &amp; Schwarz GmbH &amp; Co. KG</span>
+	<span id="BTM27">TTPCom Limited</span>
+	<span id="BTM28">Signia Technologies, Inc.</span>
+	<span id="BTM29">Conexant Systems Inc.</span>
+	<span id="BTM30">Qualcomm</span>
+	<span id="BTM31">Inventel</span>
+	<span id="BTM32">AVM Berlin</span>
+	<span id="BTM33">BandSpeed, Inc.</span>
+	<span id="BTM34">Mansella Ltd</span>
+	<span id="BTM35">NEC Corporation</span>
+	<span id="BTM36">WavePlus Technology Co., Ltd.</span>
+	<span id="BTM37">Alcatel</span>
+	<span id="BTM38">Philips Semiconductors</span>
+	<span id="BTM39">C Technologies</span>
+	<span id="BTM40">Open Interface</span>
+	<span id="BTM41">R F Micro Devices</span>
+	<span id="BTM42">Hitachi Ltd</span>
+	<span id="BTM43">Symbol Technologies, Inc.</span>
+	<span id="BTM44">Tenovis</span>
+	<span id="BTM45">Macronix International Co. Ltd.</span>
+	<span id="BTM46">GCT Semiconductor</span>
+	<span id="BTM47">Norwood Systems</span>
+	<span id="BTM48">MewTel Technology Inc.</span>
+	<span id="BTM49">ST Microelectronics</span>
+	<span id="BTM50">Synopsys</span>
+	<span id="BTM51">Red-M (Communications) Ltd</span>
+	<span id="BTM52">Commil Ltd</span>
+	<span id="BTM53">Computer Access Technology Corporation (CATC)</span>
+	<span id="BTM54">Eclipse (HQ Espana) S.L.</span>
+	<span id="BTM55">Renesas Technology Corp.</span>
+	<span id="BTM56">Mobilian Corporation</span>
+	<span id="BTM57">Terax</span>
+	<span id="BTM58">Integrated System Solution Corp.</span>
+	<span id="BTM59">Matsushita Electric Industrial Co., Ltd.</span>
+	<span id="BTM60">Gennum Corporation</span>
+	<span id="BTM61">Research In Motion</span>
+</div>
+<div id="message" title="Exception"></div>
+</div>
+<script type="text/javascript" src="misc/jquery.js" charset="UTF-8"></script>
+<script type="text/javascript" src="misc/common.js" charset="UTF-8"></script>
+<script type="text/javascript" src="misc/bluetooth_pair.js" charset="UTF-8"></script>
+</body>
+</html>

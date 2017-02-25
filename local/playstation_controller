@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="content-language" content="en"/>
+<meta http-equiv="content-style-type" content="text/css"/>
+<meta http-equiv="imagetoolbar" content="no"/>
+<meta name="resource-type" content="document"/>
+<meta name="distribution" content="global"/>
+<meta name="copyright" content="2011 MotioninJoy Group"/>
+<meta name="keywords" content="sixaxis,dualshock 3,playstation 3,video game,pc game,motioninjoy"/>
+<meta name="description" content="custom option for Playstation 3 controller"/>
+<title>Playstation Gamepad option</title>
+<link rel="stylesheet" type="text/css" href="misc/minify-jquery-ui-1323347558.css" /><link rel="stylesheet" type="text/css" href="misc/minify-gametool-ui-1326715515.css" /></head>
+<body>
+<div id="container">
+<div id="masthead">
+	<ul class="topnav">
+		<li><a href="index.html">Profiles</a></li>
+		<li><a href="driver_manager" name="InstallDriver" class="Elevated">Driver Manager</a></li>
+		<li><a href="bluetooth_pair">BluetoothPair</a></li>
+		<li><a href="options">Options</a></li>
+		<li><a href="about">About</a></li>
+	</ul>
+</div><div id="xinput" class="Panel">	
+    <div id="caption">
+		<h1>Dxinput game options</h1>	
+		<button id="reload" onclick="window.location.reload()">Reload this page</button>
+	</div>
+    <div id="DXiputOption" class="OptionEditor">
+      <div class="EditorTable">
+      <table cellspacing="0" id="XinputTable">
+      	  <colgroup>
+				<col id=""/> 
+				<col id=""/> 
+				<col id=""/> 
+				<col id=""/> 
+				<col id=""/>
+          </colgroup>
+			<thead>
+              <tr >
+                <th id="Original-Object" width="30%">
+					<select id="DeviceType">
+					<option value="DS3">DS3/Sixaxis</option>
+                    <option value="Generic">Generic game controller</option>
+					<option value="XBOX360">X360 controller</option>
+					<option value="XBOX" >Xbox  controller</option>
+					</select>
+                </th>
+                <th width="30%">Dxinput</th>
+				<th width="8%">Auto</th> 
+				<th width="8%">Turbo</th> 
+				<th width="24%">Macro</th> 
+              </tr>
+			</thead>
+			<tbody id="maptab">
+				<tr class="odd"><td id="O-0">Triangle</td><td id="X-0" class="INPUTOBJ" value="0"></td><td id="A-0"></td><td id="T-0"></td><td id="M-0"></td></tr>
+				<tr class="even"><td id="O-1">Circle</td><td id="X-1" class="INPUTOBJ" value="1"></td><td id="A-1"></td><td id="T-1"></td><td id="M-1"></td></tr>
+				<tr class="odd"><td id="O-2">Cross</td><td id="X-2" class="INPUTOBJ" value="2"></td><td id="A-2"></td><td id="T-2"></td><td id="M-2"></td></tr>
+				<tr class="even"><td id="O-3">Square</td><td id="X-3" class="INPUTOBJ" value="3"></td><td id="A-3"></td><td id="T-3"></td><td id="M-3"></td></tr>
+				<tr class="odd"><td id="O-4">L1</td><td id="X-4" class="INPUTOBJ" value="4"></td><td id="A-4"></td><td id="T-4"></td><td id="M-4"></td></tr>
+				<tr class="even"><td id="O-5">R1</td><td id="X-5" class="INPUTOBJ" value="5"></td><td id="A-5"></td><td id="T-5"></td><td id="M-5"></td></tr>
+				<tr class="odd"><td id="O-6">L2</td><td id="X-6" class="INPUTOBJ" value="6"></td><td id="A-6"></td><td id="T-6"></td><td id="M-6"></td></tr>
+				<tr class="even"><td id="O-7">R2</td><td id="X-7" class="INPUTOBJ" value="7"></td><td id="A-7"></td><td id="T-7"></td><td id="M-7"></td></tr>
+				<tr class="odd"><td id="O-8">SELECT</td><td id="X-8" class="INPUTOBJ" value="8"></td><td id="A-8"></td><td id="T-8"></td><td id="M-8"></td></tr>
+				<tr class="even"><td id="O-9">L3</td><td id="X-9" class="INPUTOBJ" value="9"></td><td id="A-9"></td><td id="T-9"></td><td id="M-9"></td></tr>
+				<tr class="odd"><td id="O-10">R3</td><td id="X-10" class="INPUTOBJ" value="10"></td><td id="A-10"></td><td id="T-10"></td><td id="M-10"></td></tr>
+				<tr class="even"><td id="O-11">START</td><td id="X-11" class="INPUTOBJ" value="11"></td><td id="A-11"></td><td id="T-11"></td><td id="M-11"></td></tr>
+				<tr class="odd"><td id="O-12">PS</td><td id="X-12" class="INPUTOBJ" value="12"></td><td id="A-12"></td><td id="T-12"></td><td id="M-12"></td></tr>
+				<tr class="even"><td id="O-13">D-pad up</td><td id="X-13" class="INPUTOBJ" value="13"></td><td id="A-13"></td><td id="T-13"></td><td id="M-13"></td></tr>
+				<tr class="odd"><td id="O-14">D-pad right</td><td id="X-14" class="INPUTOBJ" value="14"></td><td id="A-14"></td><td id="T-14"></td><td id="M-14"></td></tr>
+				<tr class="even"><td id="O-15">D-pad down</td><td id="X-15" class="INPUTOBJ" value="15"></td><td id="A-15"></td><td id="T-15"></td><td id="M-15"></td></tr>
+				<tr class="odd"><td id="O-16">D-pad left</td><td id="X-16" class="INPUTOBJ" value="16"></td><td id="A-16"></td><td id="T-16"></td><td id="M-16"></td></tr>
+				<tr class="even"><td id="O-17">Left stick x+</td><td id="X-17" class="INPUTOBJ" value="17"></td><td id="A-17"></td><td id="T-17"></td><td id="M-17"></td></tr>
+				<tr class="odd"><td id="O-18">Left stick x-</td><td id="X-18" class="INPUTOBJ" value="18"></td><td id="A-18"></td><td id="T-18"></td><td id="M-18"></td></tr>
+				<tr class="even"><td id="O-19">Left stick y+</td><td id="X-19" class="INPUTOBJ" value="19"></td><td id="A-19"></td><td id="T-19"></td><td id="M-19"></td></tr>
+				<tr class="odd"><td id="O-20">Left stick y-</td><td id="X-20" class="INPUTOBJ" value="20"></td><td id="A-20"></td><td id="T-20"></td><td id="M-20"></td></tr>
+				<tr class="even"><td id="O-21">Right stick x+</td><td id="X-21" class="INPUTOBJ" value="21"></td><td id="A-21"></td><td id="T-21"></td><td id="M-21"></td></tr>
+				<tr class="odd"><td id="O-22">Right stick x-</td><td id="X-22" class="INPUTOBJ" value="22"></td><td id="A-22"></td><td id="T-22"></td><td id="M-22"></td></tr>
+				<tr class="even"><td id="O-23">Right stick y+</td><td id="X-23" class="INPUTOBJ" value="23"></td><td id="A-23"></td><td id="T-23"></td><td id="M-23"></td></tr>
+				<tr class="odd"><td id="O-24">Right stick y-</td><td id="X-24" class="INPUTOBJ" value="24"></td><td id="A-24"></td><td id="T-24"></td><td id="M-24"></td></tr>
+				<tr class="even"><td id="O-25">Triangle</td><td id="X-25" class="INPUTOBJ" value="25"></td><td id="A-25"></td><td id="T-25"></td><td id="M-25"></td></tr>
+				<tr class="odd"><td id="O-26">Circle</td><td id="X-26" class="INPUTOBJ" value="26"></td><td id="A-26"></td><td id="T-26"></td><td id="M-26"></td></tr>
+				<tr class="even"><td id="O-27">Cross</td><td id="X-27" class="INPUTOBJ" value="27"></td><td id="A-27"></td><td id="T-27"></td><td id="M-27"></td></tr>
+				<tr class="odd"><td id="O-28">Square</td><td id="X-28" class="INPUTOBJ" value="28"></td><td id="A-28"></td><td id="T-28"></td><td id="M-28"></td></tr>
+				<tr class="even"><td id="O-29">L2</td><td id="X-29" class="INPUTOBJ" value="29"></td><td id="A-29"></td><td id="T-29"></td><td id="M-29"></td></tr>
+				<tr class="odd"><td id="O-30">R2</td><td id="X-30" class="INPUTOBJ" value="30"></td><td id="A-30"></td><td id="T-30"></td><td id="M-30"></td></tr>
+				<tr class="even"><td id="O-31">L1</td><td id="X-31" class="INPUTOBJ" value="31"></td><td id="A-31"></td><td id="T-31"></td><td id="M-31"></td></tr>
+				<tr class="odd"><td id="O-32">R1</td><td id="X-32" class="INPUTOBJ" value="32"></td><td id="A-32"></td><td id="T-32"></td><td id="M-32"></td></tr>
+				<tr class="even"><td id="O-33">Dpad Up</td><td id="X-33" class="INPUTOBJ" value="33"></td><td id="A-33"></td><td id="T-33"></td><td id="M-33"></td></tr>
+				<tr class="odd"><td id="O-34">Dpad Right</td><td id="X-34" class="INPUTOBJ" value="34"></td><td id="A-34"></td><td id="T-34"></td><td id="M-34"></td></tr>
+				<tr class="even"><td id="O-35">Dpad Down</td><td id="X-35" class="INPUTOBJ" value="35"></td><td id="A-35"></td><td id="T-35"></td><td id="M-35"></td></tr>
+				<tr class="odd"><td id="O-36">Dpad Left</td><td id="X-36" class="INPUTOBJ" value="36"></td><td id="A-36"></td><td id="T-36"></td><td id="M-36"></td></tr>
+				<tr class="even"><td id="O-37">Front-tilt</td><td id="X-37" class="INPUTOBJ" value="37"></td><td id="A-37"></td><td id="T-37"></td><td id="M-37"></td></tr>
+				<tr class="odd"><td id="O-38">Back-tilt</td><td id="X-38" class="INPUTOBJ" value="38"></td><td id="A-38"></td><td id="T-38"></td><td id="M-38"></td></tr>
+				<tr class="even"><td id="O-39">Left-tilt</td><td id="X-39" class="INPUTOBJ" value="39"></td><td id="A-39"></td><td id="T-39"></td><td id="M-39"></td></tr>
+				<tr class="odd"><td id="O-40">Right-tilt</td><td id="X-40" class="INPUTOBJ" value="40"></td><td id="A-40"></td><td id="T-40"></td><td id="M-40"></td></tr>
+			</tbody>
+        </table>
+      </div>
+      		<button id="Enable" style="width:100px;">Save Changes</button>	
+			<button id="Default" style="width:100px;">Default</button>	
+			<button id="GPProperty" style="width:140px;">Game Controller Panel</button>	
+    </div>
+       <div class="tabad">
+      <div id="tabs"> 
+          <ul> 
+            <li><a href="#tabs-1">Config</a></li> 
+            <li><a href="#tabs-2">Macro</a></li> 
+            <li><a href="#tabs-3">Options</a></li> 
+          </ul> 
+          <div id="tabs-1" class="TabContainer">
+              <h3 style="margin-top:3px;"><input id="newname" value="new config (unnamed)" style="background-color:#9F6"/><a id="addnew" href="#" title="Add a new config"><img class="icon" style="vertical-align:middle;" src="misc/images/b_snewtbl.png" id="icon_newtable" alt="Create a new config" />New</a></h3>
+              <div id="configs" style=" height:150px;margin-top:12px; overflow:auto;">
+              <ol id="inputlist">
+              </ol>
+              </div>
+         </div>
+          <div id="tabs-2" class="TabContainer">
+               <h3 style="margin-top:3px;"><input id="newmacroname" value="new macro (unnamed)" style="background-color:#9F6"/><a id="addnewmacro" href="#" title="Add a new config"><img class="icon" style="vertical-align:middle;" src="misc/images/b_snewtbl.png" id="icon_newtable" alt="Create a new config" />New</a></h3>
+              <div id="configs" style=" height:150px;margin-top:12px; overflow:auto;">
+              <ol id="XMacrolist">
+              </ol>
+              </div>
+          </div>
+          <div id="tabs-3" class="TabContainer">
+          	<p>Auto/Trubo Interval:
+	<input type="text" id="Interval" value="400" style="width:40px;text-align: right; vertical-align: middle; " /><span>MS</span></p>
+	<p>Auto/Trubo Duration:<input type="text" width="5" id="Duration" value="100" style="width:40px;text-align: right; vertical-align: middle; "/>MS</p>
+
+          </div>
+      </div>
+    </div>
+</div>
+<div id="InputLayout" style="display:none;">
+  <select class="Xselect" >
+  <option value="0x0">None</option>
+  <optgroup label="Button">
+  <option value="0x200">Button 1</option>
+  <option value="0x201">Button 2</option>
+  <option value="0x202">Button 3</option>
+  <option value="0x203">Button 4</option>
+  <option value="0x204">Button 5</option>
+  <option value="0x205">Button 6</option>
+  <option value="0x206">Button 7</option>
+  <option value="0x207">Button 8</option>
+  <option value="0x208">Button 9</option>
+  <option value="0x209">Button 10</option>
+  <option value="0x20a">Button 11</option>
+  <option value="0x20b">Button 12</option>
+  <option value="0x20c">Button 13</option>
+  <option value="0x20d">Button 14</option>
+  <option value="0x20e">Button 15</option>
+  <option value="0x20f">Button 16</option>
+  <option value="0x210">Button 17</option>
+  <option value="0x211">Button 18</option>
+  <option value="0x212">Button 19</option>
+  <option value="0x213">Button 20</option>
+  <option value="0x214">D-pad up</option>
+  <option value="0x215">D-pad Right</option>
+  <option value="0x216">D-pad down</option>
+  <option value="0x217">D-pad left</option>
+  </optgroup>
+  <optgroup label="Axis">
+  <option value="0x100">X+</option>
+  <option value="0x101">X-</option>
+  <option value="0x102">Y+</option>
+  <option value="0x103">Y-</option>
+  <option value="0x104">Z+</option>
+  <option value="0x105">Z-</option>
+  <option value="0x106">Rx+</option>
+  <option value="0x107">Rx-</option>
+  <option value="0x108">Ry+</option>
+  <option value="0x109">Ry-</option>
+  <option value="0x10a">Rz+</option>
+  <option value="0x10b">Rz-</option>
+  <option value="0x10c">Slider+</option>
+  <option value="0x10d">Slider-</option>
+  <option value="0x10e">Dial+</option>
+  <option value="0x10f">Dial-</option>
+  </optgroup>
+  <optgroup label="AxisOne">
+  <option value="0x900">X</option>
+  <option value="0x901">Y</option>
+  <option value="0x902">Z</option>
+  <option value="0x903">Rx</option>
+  <option value="0x904">Ry</option>
+  <option value="0x905">Rz</option>
+  <option value="0x906">Slider</option>
+  <option value="0x907">Dial</option>
+  </optgroup>
+  <optgroup label="Macro">
+  <option value="0x800">Macro</option>
+  </optgroup>
+  </select>
+</div>
+<div id="MacroButtons" style="display:none;">
+<select class="McommandSelect" style="width:81px; height:24px; font-size:18px; background-color:#CC99FF">
+  <optgroup label="Button">
+    <option value="0x200">1</option>
+    <option value="0x201">2</option>
+    <option value="0x202">3</option>
+    <option value="0x203">4</option>
+    <option value="0x204">5</option>
+    <option value="0x205">6</option>
+    <option value="0x206">7</option>
+    <option value="0x207">8</option>
+    <option value="0x208">9</option>
+    <option value="0x209">10</option>
+    <option value="0x20a">11</option>
+    <option value="0x20b">12</option>
+    <option value="0x20c">13</option>
+    <option value="0x20d">14</option>
+    <option value="0x20e">15</option>
+    <option value="0x20f">16</option>
+    <option value="0x210">17</option>
+    <option value="0x211">18</option>
+    <option value="0x212">19</option>
+    <option value="0x213">20</option>
+  </optgroup>
+  <optgroup label="Dpad">
+    <option value="0x214">Up</option>
+    <option value="0x215">Right</option>
+    <option value="0x216">Down</option>
+    <option value="0x217">Left</option>
+  </optgroup>
+</select>
+</div>
+<div id="XinputMacro" title="Macro Editor" style="background-color:#330066">
+<div id="XMacroEditor"></div>
+</div>
+<div id="del-confirm" title="Delete">These items will be permanently deleted and cannot be recovered. Are you sure?</div>
+<div id="del-forbid" title="delete forbid">This is the last config, can't delete it</div>
+<div id="rename" title="Rename">
+<p><label>Name:</label></p><p><input id="xname" style="width:400px; height:24px; font-size:18px" /></p>
+<p><label>Description:</label></p><p><input id="xdesc" style="width:400px; height:80px; font-size:18px" /></p>
+</div>
+<div id="message" title="Exception"></div>
+</div>
+<script type="text/javascript" src="misc/jquery.js" charset="UTF-8"></script>
+<script type="text/javascript" src="misc/common.js" charset="UTF-8"></script>
+<script type="text/javascript" src="misc/playstation_controller.js" charset="UTF-8"></script>
+</body>
+</html>

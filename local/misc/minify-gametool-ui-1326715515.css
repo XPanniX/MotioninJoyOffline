@@ -1,0 +1,133 @@
+*{margin:0;padding:0;}
+body {font-family:Verdana, Arial, Helvetica, sans-serif;background:#000;font-size: 62.5%;}
+button{font-size:12px;}
+img,a .img{border:0;}
+a:link,a:visited {color:#1b75bb;text-decoration:none;}
+a:hover,a:active {color:#0b559b;}
+#container{margin:0 auto;width:780px;height:560px;background:#96C223;color: #333333;font-size:14px;overflow:hidden;}
+#masthead{width:100%;height:35px;}
+ul.topnav {list-style: none;margin: 0;float: left;width: 100%;background: #222;background: url(images/topnav_bg.gif) repeat-x;}
+ul.topnav li {float: left;margin: 0;padding: 0 15px 0 0;position: relative;}
+ul.topnav li a{padding: 10px 5px;color: #fff;display: block;text-decoration: none;float: left;}
+ul.topnav li a:hover{background: url(images/topnav_hover.gif) no-repeat center top;}
+ul.topnav li span {width: 17px;height: 35px;float: left;background: url(images/subnav_btn.gif) no-repeat center top;}
+ul.topnav li span.subhover {background-position: center bottom;cursor: pointer;}
+ul.topnav li ul.subnav {list-style: none;position: absolute;left: 0;top: 35px;background: #333;margin: 0;padding: 0;display: none;float: left;width: 340px;-moz-border-radius-bottomleft: 5px;-moz-border-radius-bottomright: 5px;-webkit-border-bottom-left-radius: 5px;-webkit-border-bottom-right-radius: 5px;border: 1px solid #111;z-index:100;}
+ul.topnav li ul.subnav li{margin: 0;padding: 0;border-top: 1px solid #252525;border-bottom: 1px solid #444;width: 170px;}
+html ul.topnav li ul.subnav li a {float: left;width: 145px;padding-left: 20px;}
+html ul.topnav li ul.subnav li a:hover {background: #222 url(images/dropdown_linkbg.gif) no-repeat 10px center;}
+.Panel{width: 100%;height: 100%;}
+.Panel #caption h1 {float:left;font-size:18px;color:#96C223;background-color:#86a220;}
+.Panel #caption {width:100%;background-color:#86a220;height:24px;}
+.Panel #caption #reload{float:right;width:120px;}
+#QuickStart,#editor,#DriverManager{width:100%;height:100%;}
+#QuickStart p{padding-top:6px;padding-left:15px;}
+#BTpairing,#OptionsConfig {width:468px;height:496px;background-color: #96C223;margin-left: auto;margin-right: auto;}
+#quickConfig {width:468px;height:496px;background-color: #96C223;margin-left: auto;margin-right: auto;}
+#XiputOption{height:496px;background-color: #96C223;}
+.OptionEditor{width:468px;height:496px;clear:left;float:left;background-color: #96C223;}
+#ProfileConfig{height:496px;background-color: #96C223;}
+#ProfileConfig table{width:100%;}
+.controllerLists{clear:both;padding-top:6px;}
+.controllerLists select{padding-left:5px;width:260px;}
+.devlist{clear:left;float:left;padding-left:20px;}
+.controllerStatus{float:right;padding-top:0px;font-size: 62.5%;}
+.BatteryLevText{font-size:14px;text-align:center;width:89px;float:right;}
+.BatteryLevPic{background-image: url(images/progressbar0.gif);background-position:0px 2px;width:89px;float:right;}
+.ModeLists{clear:both;}
+.Modeinf{padding-left:5px;font-size:12px;color:#000080;}
+.ModeLists select{width:240px;}
+#info{clear:both;}
+#tabs ol {padding-left:25px;list-style-type:circle;font-size:12px;}
+#tabs h3 {background:#ffffff;font-size:14px;}
+#tabs-1, #tabs-2, #tabs-3{margin:0;padding:0;font-size:14px;height:468px;background-color:#96C223;}
+.tabad{clear:right;width:310px;float:right;font-size: 62.5%;}
+#BatteryBar .ui-progressbar-value {background-image: url(images/progressbar1.gif);background-position:0px 2px;}
+#BatteryBar .ui-progressbar {}
+#OpenDialog,#SaveDialog{font-size:12px;}
+.ProfileList{width:120px !important;}
+.EditorTable {height:463px;overflow:auto;}
+.EditorTable select{font-size:12px;width:90%;}
+.XinputTable {margin:0 auto;width:100%;height:426px;overflow:auto;}
+.XinputTable select{font-size:12px;width:90%;}
+#object0, #object1, #object2, #object3, #object4, #object5, #object6, #object7, #object8, #object9, #object10, #object11,#object12, #object13, #object14, #object15, #object16, #object17, #object18, #object19,#object20, #object21, #object22, #object23, #object24, #object25, #object26{width:20px;height:20px;background-image:url(images/object.png);}
+#object0{background-position:0 0;}
+#object1{background-position:-20px 0;}
+#object2{background-position:-40px 0;}
+#object3{background-position:-60px 0;}
+#object4{background-position:-80px 0;}
+#object5{background-position:-100px 0;}
+#object6{background-position:-120px 0;}
+#object7{background-position:-140px 0;}
+#object8{background-position:-200px 0;}
+#object9{background-position:-160px 0;}
+#object10{background-position:-180px 0;}
+#object11{background-position:-220px 0;}
+#object12{background-position:-240px 0;}
+#object13{background-position:-260px 0;}
+#object14{background-position:-280px 0;}
+#object15{background-position:-300px 0;}
+#object16{background-position:-320px 0;}
+#object17{background-position:-340px 0;}
+#object18{background-position:-360px 0;}
+#object19{background-position:-380px 0;}
+#object20{background-position:-400px 0;}
+#object21{background-position:-420px 0;}
+#object22{background-position:-440px 0;}
+#object23{background-position:-460px 0;}
+#object24{background-position:-480px 0;}
+#object25{background-position:-500px 0;}
+.teselect,#tds0{display:none;}
+table{border-collapse:collapse;margin:0;border:1px solid #666;}
+caption {font-size: 1.2em;font-weight: bold;margin: 1em 0;background-color:#737373;}
+thead {background-color:#ccc;border-top:1px solid #a5a5a5;border-bottom:1px solid #a5a5a5;}
+th {font-weight: bold;text-align:center;}
+th, td {padding-left:5px;padding-right:5px;}
+td select{width:100%;}
+.odd {background-color:#edf5ff;}
+.even{background-color:#ffffff;}
+tr:hover{background-color: #3D80DF;color: #FFF;}
+thead tr:hover {background-color: transparent;color: inherit;}
+#keyboard {display:none;width: 760px;height:280px;font-size:62.5%;padding:0 0 0 16px;margin:0 auto;background-image:url(images/keyboard.png);}
+#row0 #Esc{margin-right:22px;}
+#row0 #F3{margin-right:20px;}
+#row0 #F6{margin-right:20px;}
+#row0 #F9{margin-right:20px;}
+#row0 #F12{margin-right:12px;}
+#row1 #d6{margin-right:0;}
+#row3 #Enter{width:74px;margin-right:22px;}
+#keyboard #spacebar{width:204px;}
+#keyboard button {width: 30px;height:29px;float:left;background-color:transparent;margin-right:3px;margin-bottom:4px;border:0 solid #ff0000;}
+#keyboard button:hover{border:1px solid #0f0;}
+#row0 button {margin-top:15px;margin-bottom:20px;}
+#row1 button {margin-bottom:3px;}
+#row2 button {margin-bottom:3px;}
+#row3 button {margin-bottom:3px;}
+#row4 button {margin-bottom:3px;}
+#row5 button {margin-bottom:3px;}
+#row1 #backspace {width: 36px;margin-right:12px;}
+#row1 #accent {clear:left;}
+#keyboard #tab {width:44px;clear:left;}
+#keyboard #CapsLock {width:54px;clear:left;}
+#keyboard #lShift{width:72px;clear:left;}
+#keyboard #rShift{width:60px;}
+#keyboard #lCtrl{width:46px;clear:left;}
+#keyboard #lWin{width:46px;}
+#keyboard #lAlt{width:46px;}
+#keyboard #rCtrl{width:46px;}
+#keyboard #rWin{width:46px;}
+#keyboard #rAlt{width:46px;}
+.ui-slider {margin-top:2px;margin-bottom:2px;font-size:12px}
+.ui-slider-horizontal {text-align:center;height: 12px;width:256px;}
+.ui-slider-horizontal .ui-slider-handle {top: -2px;margin-left: 0;height:14px;width:6px;}
+.ui-slider-vertical {margin-left:5px;text-align:center;width: 16px;height: 256px;font-size:12px}
+.ui-slider-vertical .ui-slider-handle {width:18px;height:4px;left: -1px;margin-left: 0;margin-bottom: 0;}
+.tooltip {display:none;background:transparent url(images/black_arrow.png);font-size:12px;height:70px;width:160px;padding:25px;color:#fff;}
+.XinputMacroEditor{height:330px;width:inherit;overflow:auto;background-color:#666666}
+.XinputMacroBar{margin-top:10px;width:400px;height:24px;background-color:#ffffff}
+.XinputMacroBarPoint {border-left:1px solid #00ff00;background-color:#CCCCCC;height:inherit;float:left;}
+.XinputMacroBarButtonName{height:24px;width:80px;float:left;background-color:#ffffff;color:#9933FF;}
+.McommandSelect{width:81px;height:24px;font-size:18px;background-color:#CC99FF;}
+.listSelected{font-weight:bold;}
+.TurboSettings {width:100%; text-align:center; border:none; margin-top:10px; margin-bottom:10px;}
+.TurboSettings tr:hover {background-color:transparent; color:inherit;}

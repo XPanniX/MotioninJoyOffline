@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+<meta http-equiv="content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="content-language" content="en"/>
+<meta http-equiv="content-style-type" content="text/css"/>
+<meta http-equiv="imagetoolbar" content="no"/>
+<meta name="resource-type" content="document"/>
+<meta name="distribution" content="global"/>
+<meta name="copyright" content="2011 MotioninJoy Group"/>
+<meta name="keywords" content="gamepad,game,sixaxis,dualshock 3,playstation 3,Xbox 360"/>
+<meta name="description" content="Sixaxis and Dualshock 3 on Microsoft Windows quick start guide"/>
+<title>Game tools for windows</title>
+<link rel="stylesheet" type="text/css" href="misc/minify-jquery-ui-1323347558.css" /><link rel="stylesheet" type="text/css" href="misc/minify-gametool-ui-1326715515.css" /></head>
+<body>
+<div id="container">
+<div id="masthead">
+	<ul class="topnav">
+		<li><a href="index.html">Profiles</a></li>
+		<li><a href="driver_manager" name="InstallDriver" class="Elevated">Driver Manager</a></li>
+		<li><a href="bluetooth_pair">BluetoothPair</a></li>
+		<li><a href="options">Options</a></li>
+		<li><a href="about">About</a></li>
+	</ul>
+</div>
+<div id="QuickStart" class="Panel">	
+	<div id="caption"><h1>Quick config for your game(s)</h1><button id="reload" style="width:120px; float:right;" onclick="window.location.reload()">Reload this page</button></div>
+  <div id="quickConfig">
+  	<noscript> 
+		<div style="font: bold 16px Arial; color:#F8F8FF; background: maroon;">
+			<p >You will need to enable Javascript if you have it disabled.</p>
+			<p><a href="http://www.motioninjoy.com/wiki/en/help/help/enable-javascript" target="_blank">How do I enable JavaScript in Internet Explorer<img src="misc/images/question_mark_over.gif" border="0"/></a></p>
+		</div>
+	</noscript>
+		<div class="controllerLists">
+		  <p><label style="font-weight:bold ">Connected game controller(s):</label></p>
+			<div class="devlist">
+			<select id="ControllerList"><option value="0">Waiting for controller to be connected</option></select>
+			</div>
+			<div class="controllerStatus">
+			<div id="BatteryBar" class="BatteryLevPic"><span id="batteryLev" class="BatteryLevText"></span></div>				
+			</div>
+		</div>
+		<div class="ModeLists">
+			<p><label style="font-weight:bold ">Select one mode:</label></p>
+			<p><label for="mode1" class="Modeinf"><input id="mode1" class="ModeSelect" type="radio" name="mode" value="1"/> Playstation 1 (D-pad, no Joysticks)</label></p>
+			<p><label for="mode2" class="Modeinf"><input id="mode2" class="ModeSelect" type="radio" name="mode" value="2" checked="checked"/> Playstation 2 (PoV, Joysticks, Digital Triggers)</label></p>
+			<p><label for="mode3" class="Modeinf"><input id="mode3" class="ModeSelect" type="radio" name="mode" value="3"/> Playstation 2 (PoV, Joysticks, Analog Triggers)</label></p>
+			<p><label for="mode4" class="Modeinf"><input id="mode4" class="ModeSelect" type="radio" name="mode" value="4"/> Playstation 3 <select id="DXinputPList" class="ProfileList"><option value="0">No Profie</option></select></label><a href="playstation_controller" class="pConfig">=> Options</a></p>
+			<p><label for="mode5" class="Modeinf"><input id="mode5" class="ModeSelect" type="radio" name="mode" value="5"/> Xbox 360 Emulator <select id="XinputPList" class="ProfileList"><option value="0">No Profie</option></select></label><a href="xbox360_controller" class="pConfig">=> Options</a></p>
+			<p>
+			<label for="mode6" class="Modeinf"><input id="mode6" class="ModeSelect" type="radio" name="mode" value="0"/> Custom <select id="CustomPList" class="ProfileList"><option value="0">No Profie</option></select></label> <a href="custom" class="pConfig">=> Options</a></p>
+		</div>
+		<div>
+		<fieldset style="clear:both; margin-left:10px; padding-left:8px;">
+			<legend>LED</legend>
+			<span style="float:left; "><label for="LEDMODE1" class="LEDModeinf"><input id="LEDMODE1" type="radio" name="LED" value="0"/>Battery information</label></span>
+			<span style="float:left; margin-left:20px; margin-right:5px;"><label for="LEDMODE2" class="LEDModeinf"><input id="LEDMODE2" type="radio" name="LED" value="1"/>Custom:</label></span>
+			<div style="float:left;">
+				<label for="LED1" class="LEDinf">1<input type="checkbox" id="LED1" name="LEDBIT"/></label>
+				<label for="LED2" class="LEDinf">2<input type="checkbox" id="LED2" name="LEDBIT"/></label>
+				<label for="LED3" class="LEDinf">3<input type="checkbox" id="LED3" name="LEDBIT"/></label>
+				<label for="LED4" class="LEDinf">4<input type="checkbox" id="LED4" name="LEDBIT"/></label>
+			</div>
+		</fieldset>
+		</div>
+		<div style="margin-top:20px;margin-bottom:15px;margin-left:15px;font-size: 62.5%; ">
+			<div style="margin-right:20px;float:left "><label for="vibration_strength_left" style="font-size:12px;float:left;">Left (strong) Motor:<span id="lMotorV">100%</span></label><div id="lMotor" style="margin-top:16px;height:8px;width:150px; "></div></div>
+			<div style="margin-right:20px;float:left"><label for="vibration_strength_right" style="font-size:12px;float:left;">Right (weak) Motor:<span id="rMotorV">100%</span></label><div id="rMotor" style="margin-top:16px;height:8px;width:150px; "></div></div>
+		</div>	
+		<div style="clear:both; padding-top:15px;">
+			<button id="Enable" style="width:77px;">Enable</button>	
+			<button id="vibrationLeft" style="width:90px;">Vibration Left</button>
+			<button id="vibrationRight" style="width:95px;">Vibration Right</button>
+			<button id="GPProperty" style="width:110px;" >Game Controllers</button>	
+			<button id="Disconnect" style="width:76px;">Disconnect</button>	
+		</div>
+  </div>
+	<div id="info"></div>
+</div>
+<div style="display:none;">
+	<span id="ControllerName"></span>
+	<span id="USBDS3Name"></span>
+	<span id="BTDS3">Dualshock 3 / Sixaxis (Bluetooth)</span>
+	<span id="USBDS3">Dualshock 3 / Sixaxis (USB)</span>
+	<span id="BTPSNAVIGATION">Sony Navigation Controller (Bluetooth)</span>
+	<span id="USBPSNAVIGATION">Sony Navigation Controller (USB)</span>
+	<span id="XBOXCONTROLLER">Old Xbox Controller</span>
+	<span id="XBOX360WIRED">Xbox 360 Wired Controller</span>
+	<span id="XBOX360WIRELESS">Xbox 360 Wireless Controller</span>
+	<span id="USBPS3KEYPAD">Playstaion 3 Wireless Keypad(USB)</span>
+	<span id="USBPSMOVE">Playstaion Move Motion Controller(USB)</span>
+	<span id="PS3KEYPAD">Playstaion 3 Wireless Keypad</span>
+	<span id="PS3REMOTE">PS3 BD Remote Control (Bluetooth)</span>
+	<span id="PSMOVE">Playstaion Move Motion Controller</span>
+	<span id="WIIMOTE">Wii Remote (Bluetooth)</span>
+	<span id="ALECPAD">ALEC Game pad</span>
+	<span id="BTP2165">BTP-2165</span>
+	<span id="NoController">Waiting for controller to be connected</span>
+</div>
+<div id="message" title="Exception"></div>
+</div>
+<script type="text/javascript" src="misc/jquery.js" charset="UTF-8"></script>
+<script type="text/javascript" src="misc/common.js" charset="UTF-8"></script>
+<script type="text/javascript" src="misc/profile.js" charset="UTF-8"></script>
+</body>
+</html>

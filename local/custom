@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="content-language" content="en"/>
+<meta http-equiv="content-style-type" content="text/css"/>
+<meta http-equiv="imagetoolbar" content="no"/>
+<meta name="resource-type" content="document"/>
+<meta name="distribution" content="global"/>
+<meta name="copyright" content="2011 MotioninJoy Group"/>
+<meta name="keywords" content="game profile,gamepad"/>
+<meta name="description" content="edit game profile"/>
+<title>MotioninJoy profile editor</title>
+<link rel="stylesheet" type="text/css" href="misc/minify-jquery-ui-1323347558.css" /><link rel="stylesheet" type="text/css" href="misc/minify-gametool-ui-1326715515.css" /></head>
+<body>
+<div id="container">
+<div id="masthead">
+	<ul class="topnav">
+		<li><a href="index.html">Profiles</a></li>
+		<li><a href="driver_manager" name="InstallDriver" class="Elevated">Driver Manager</a></li>
+		<li><a href="bluetooth_pair">BluetoothPair</a></li>
+		<li><a href="options">Options</a></li>
+		<li><a href="about">About</a></li>
+	</ul>
+</div><div id="custom" class="Panel">	
+    <div id="caption">
+		<h1>Profile Editor</h1>	
+		<button id="reload" onclick="window.location.reload()">Reload this page</button>
+	</div>
+    <div id="DXiputOption" class="OptionEditor">
+      <div class="EditorTable">
+      <table cellspacing="0" id="XinputTable">
+      	  <colgroup>
+				<col id=""/> 
+				<col id=""/> 
+				<col id=""/> 
+				<col id=""/> 
+				<col id=""/>
+          </colgroup>
+			<thead>
+              <tr >
+                <th id="Original-Object" width="24%">
+					<select id="DeviceType">
+					<option value="DS3">DS3/Sixaxis</option>
+                    <option value="Generic">Generic game controller</option>
+					<option value="XBOX" >Xbox  controller</option>
+					<option value="XBOX360">X360 controller</option>
+					</select>
+                </th>
+                <th width="30%">Device</th>
+				<th width="30%">Object</th> 
+				<th width="8%">A</th> 
+				<th width="8%">T</th> 
+              </tr>
+			</thead>
+			<tbody id="maptab">
+				<tr class="odd"><td id="O-0">Triangle</td><td id="TD-0" class="tdvice" value="0"></td><td id="TO-0"></td><td id="A-0"></td><td id="T-0"></td><td id="M-0"></td></tr>
+				<tr class="even"><td id="O-1">Circle</td><td id="TD-1" class="tdvice" value="1"></td><td id="TO-1"></td><td id="A-1"></td><td id="T-1"></td><td id="M-1"></td></tr>
+				<tr class="odd"><td id="O-2">Cross</td><td id="TD-2" class="tdvice" value="2"></td><td id="TO-2"></td><td id="A-2"></td><td id="T-2"></td><td id="M-2"></td></tr>
+				<tr class="even"><td id="O-3">Square</td><td id="TD-3" class="tdvice" value="3"></td><td id="TO-3"></td><td id="A-3"></td><td id="T-3"></td><td id="M-3"></td></tr>
+				<tr class="odd"><td id="O-4">L1</td><td id="TD-4" class="tdvice" value="4"></td><td id="TO-4"></td><td id="A-4"></td><td id="T-4"></td><td id="M-4"></td></tr>
+				<tr class="even"><td id="O-5">R1</td><td id="TD-5" class="tdvice" value="5"></td><td id="TO-5"></td><td id="A-5"></td><td id="T-5"></td><td id="M-5"></td></tr>
+				<tr class="odd"><td id="O-6">L2</td><td id="TD-6" class="tdvice" value="6"></td><td id="TO-6"></td><td id="A-6"></td><td id="T-6"></td><td id="M-6"></td></tr>
+				<tr class="even"><td id="O-7">R2</td><td id="TD-7" class="tdvice" value="7"></td><td id="TO-7"></td><td id="A-7"></td><td id="T-7"></td><td id="M-7"></td></tr>
+				<tr class="odd"><td id="O-8">SELECT</td><td id="TD-8" class="tdvice" value="8"></td><td id="TO-8"></td><td id="A-8"></td><td id="T-8"></td><td id="M-8"></td></tr>
+				<tr class="even"><td id="O-9">L3</td><td id="TD-9" class="tdvice" value="9"></td><td id="TO-9"></td><td id="A-9"></td><td id="T-9"></td><td id="M-9"></td></tr>
+				<tr class="odd"><td id="O-10">R3</td><td id="TD-10" class="tdvice" value="10"></td><td id="TO-10"></td><td id="A-10"></td><td id="T-10"></td><td id="M-10"></td></tr>
+				<tr class="even"><td id="O-11">START</td><td id="TD-11" class="tdvice" value="11"></td><td id="TO-11"></td><td id="A-11"></td><td id="T-11"></td><td id="M-11"></td></tr>
+				<tr class="odd"><td id="O-12">PS</td><td id="TD-12" class="tdvice" value="12"></td><td id="TO-12"></td><td id="A-12"></td><td id="T-12"></td><td id="M-12"></td></tr>
+				<tr class="even"><td id="O-13">D-pad up</td><td id="TD-13" class="tdvice" value="13"></td><td id="TO-13"></td><td id="A-13"></td><td id="T-13"></td><td id="M-13"></td></tr>
+				<tr class="odd"><td id="O-14">D-pad right</td><td id="TD-14" class="tdvice" value="14"></td><td id="TO-14"></td><td id="A-14"></td><td id="T-14"></td><td id="M-14"></td></tr>
+				<tr class="even"><td id="O-15">D-pad down</td><td id="TD-15" class="tdvice" value="15"></td><td id="TO-15"></td><td id="A-15"></td><td id="T-15"></td><td id="M-15"></td></tr>
+				<tr class="odd"><td id="O-16">D-pad left</td><td id="TD-16" class="tdvice" value="16"></td><td id="TO-16"></td><td id="A-16"></td><td id="T-16"></td><td id="M-16"></td></tr>
+				<tr class="even"><td id="O-17">Left stick x+</td><td id="TD-17" class="tdvice" value="17"></td><td id="TO-17"></td><td id="A-17"></td><td id="T-17"></td><td id="M-17"></td></tr>
+				<tr class="odd"><td id="O-18">Left stick x-</td><td id="TD-18" class="tdvice" value="18"></td><td id="TO-18"></td><td id="A-18"></td><td id="T-18"></td><td id="M-18"></td></tr>
+				<tr class="even"><td id="O-19">Left stick y+</td><td id="TD-19" class="tdvice" value="19"></td><td id="TO-19"></td><td id="A-19"></td><td id="T-19"></td><td id="M-19"></td></tr>
+				<tr class="odd"><td id="O-20">Left stick y-</td><td id="TD-20" class="tdvice" value="20"></td><td id="TO-20"></td><td id="A-20"></td><td id="T-20"></td><td id="M-20"></td></tr>
+				<tr class="even"><td id="O-21">Right stick x+</td><td id="TD-21" class="tdvice" value="21"></td><td id="TO-21"></td><td id="A-21"></td><td id="T-21"></td><td id="M-21"></td></tr>
+				<tr class="odd"><td id="O-22">Right stick x-</td><td id="TD-22" class="tdvice" value="22"></td><td id="TO-22"></td><td id="A-22"></td><td id="T-22"></td><td id="M-22"></td></tr>
+				<tr class="even"><td id="O-23">Right stick y+</td><td id="TD-23" class="tdvice" value="23"></td><td id="TO-23"></td><td id="A-23"></td><td id="T-23"></td><td id="M-23"></td></tr>
+				<tr class="odd"><td id="O-24">Right stick y-</td><td id="TD-24" class="tdvice" value="24"></td><td id="TO-24"></td><td id="A-24"></td><td id="T-24"></td><td id="M-24"></td></tr>
+				<tr class="even"><td id="O-25">Triangle</td><td id="TD-25" class="tdvice" value="25"></td><td id="TO-25"></td><td id="A-25"></td><td id="T-25"></td><td id="M-25"></td></tr>
+				<tr class="odd"><td id="O-26">Circle</td><td id="TD-26" class="tdvice" value="26"></td><td id="TO-26"></td><td id="A-26"></td><td id="T-26"></td><td id="M-26"></td></tr>
+				<tr class="even"><td id="O-27">Cross</td><td id="TD-27" class="tdvice" value="27"></td><td id="TO-27"></td><td id="A-27"></td><td id="T-27"></td><td id="M-27"></td></tr>
+				<tr class="odd"><td id="O-28">Square</td><td id="TD-28" class="tdvice" value="28"></td><td id="TO-28"></td><td id="A-28"></td><td id="T-28"></td><td id="M-28"></td></tr>
+				<tr class="even"><td id="O-29">L2</td><td id="TD-29" class="tdvice" value="29"></td><td id="TO-29"></td><td id="A-29"></td><td id="T-29"></td><td id="M-29"></td></tr>
+				<tr class="odd"><td id="O-30">R2</td><td id="TD-30" class="tdvice" value="30"></td><td id="TO-30"></td><td id="A-30"></td><td id="T-30"></td><td id="M-30"></td></tr>
+				<tr class="even"><td id="O-31">L1</td><td id="TD-31" class="tdvice" value="31"></td><td id="TO-31"></td><td id="A-31"></td><td id="T-31"></td><td id="M-31"></td></tr>
+				<tr class="odd"><td id="O-32">R1</td><td id="TD-32" class="tdvice" value="32"></td><td id="TO-32"></td><td id="A-32"></td><td id="T-32"></td><td id="M-32"></td></tr>
+				<tr class="even"><td id="O-33">Dpad Up</td><td id="TD-33" class="tdvice" value="33"></td><td id="TO-33"></td><td id="A-33"></td><td id="T-33"></td><td id="M-33"></td></tr>
+				<tr class="odd"><td id="O-34">Dpad Right</td><td id="TD-34" class="tdvice" value="34"></td><td id="TO-34"></td><td id="A-34"></td><td id="T-34"></td><td id="M-34"></td></tr>
+				<tr class="even"><td id="O-35">Dpad Down</td><td id="TD-35" class="tdvice" value="35"></td><td id="TO-35"></td><td id="A-35"></td><td id="T-35"></td><td id="M-35"></td></tr>
+				<tr class="odd"><td id="O-36">Dpad Left</td><td id="TD-36" class="tdvice" value="36"></td><td id="TO-36"></td><td id="A-36"></td><td id="T-36"></td><td id="M-36"></td></tr>
+				<tr class="even"><td id="O-37">Front-tilt</td><td id="TD-37" class="tdvice" value="37"></td><td id="TO-37"></td><td id="A-37"></td><td id="T-37"></td><td id="M-37"></td></tr>
+				<tr class="odd"><td id="O-38">Back-tilt</td><td id="TD-38" class="tdvice" value="38"></td><td id="TO-38"></td><td id="A-38"></td><td id="T-38"></td><td id="M-38"></td></tr>
+				<tr class="even"><td id="O-39">Left-tilt</td><td id="TD-39" class="tdvice" value="39"></td><td id="TO-39"></td><td id="A-39"></td><td id="T-39"></td><td id="M-39"></td></tr>
+				<tr class="odd"><td id="O-40">Right-tilt</td><td id="TD-40" class="tdvice" value="40"></td><td id="TO-40"></td><td id="A-40"></td><td id="T-40"></td><td id="M-40"></td></tr>
+			</tbody>
+        </table>
+      </div>
+      		<button id="Enable" style="width:100px;">Save Changes</button>	
+			<button id="Default" style="width:100px;">Default</button>	
+			<button id="GPProperty" style="width:140px;">Game Controller Panel</button>	
+    </div>
+       <div class="tabad">
+      <div id="tabs"> 
+          <ul> 
+            <li><a href="#tabs-1">Config</a></li> 
+            <li><a href="#tabs-2">Macro</a></li> 
+            <li><a href="#tabs-3">Options</a></li> 
+          </ul> 
+          <div id="tabs-1" class="TabContainer">
+              <h3 style="margin-top:3px;"><input id="newname" value="new config (unnamed)" style="background-color:#9F6"/><a id="addnew" href="#" title="Add a new config"><img class="icon" style="vertical-align:middle;" src="misc/images/b_snewtbl.png" id="icon_newtable" alt="Create a new config" />New  </a><label for="inputMode"><input id="inputMode" type="checkbox"/>Xinput</label></h3>
+              <div id="configs" style=" height:150px;margin-top:12px; overflow:auto;">
+              <ol id="inputlist">
+              </ol>
+              </div>
+         </div>
+          <div id="tabs-2" class="TabContainer">
+               <h3 style="margin-top:3px;"><input id="newmacroname" value="new macro (unnamed)" style="background-color:#9F6"/><a id="addnewmacro" href="#" title="Add a new config"><img class="icon" style="vertical-align:middle;" src="misc/images/b_snewtbl.png" id="icon_newtable" alt="Create a new config" />New</a></h3>
+              <div id="configs" style=" height:150px;margin-top:12px; overflow:auto;">
+              <ol id="Macrolist">
+              </ol>
+              </div>
+          </div>
+          <div id="tabs-3" class="TabContainer">
+          	<p>Auto/Trubo Interval:
+	<input type="text" id="Interval" value="400" style="width:40px;text-align: right; vertical-align: middle; " /><span>MS</span></p>
+	<p>Auto/Trubo Duration:<input type="text" width="5" id="Duration" value="100" style="width:40px;text-align: right; vertical-align: middle; "/>MS</p>
+
+          </div>
+      </div>
+    </div>
+</div>
+<div id="tds0" style="display:none;">
+<select class="tdselect">
+<option value="0">None</option>
+<option value="1">Gamepad</option>
+<option value="2">keyboard</option>
+<option value="3">mouse</option>
+<option value="4">Macro</option>
+</select>
+</div>
+<div id="xinput" style="display:none;">
+<select class="Xselect" >
+  <optgroup label="Button">
+    <option value="0x600">A button</option>
+    <option value="0x601">B button</option>
+    <option value="0x602">X button</option>
+    <option value="0x603">Y button</option>
+    <option value="0x604">LB</option>
+    <option value="0x605">RB</option>
+    <option value="0x606">Back</option>
+    <option value="0x607">Start</option>
+    <option value="0x608">Left hat button</option>
+    <option value="0x609">Right hat button</option>
+    <option value="0x60a">XBox button</option>
+    <option value="0x60b">D-pad up</option>
+    <option value="0x60e">D-pad Right</option>
+    <option value="0x60c">D-pad down</option>
+    <option value="0x60d">D-pad left</option>
+  </optgroup>
+  <optgroup label="Axis">
+    <option value="0x700">Left Trigger</option>
+    <option value="0x701">Right Trigger</option>
+    <option value="0x702">Left Stick X+</option>
+    <option value="0x703">Left Stick X-</option>
+    <option value="0x705">Left Stick Y+</option>
+    <option value="0x704">Left Stick Y-</option>
+    <option value="0x706">Right Stick X+</option>
+    <option value="0x707">Right Stick X-</option>
+    <option value="0x709">Right Stick Y+</option>
+    <option value="0x708">Right Stick Y-</option>
+  </optgroup>
+  </select>
+</div>
+<div id="dxinput" style="display:none;">
+<select class="iselect" >
+  <optgroup label="Button">
+    <option value="0x200">Button 1</option>
+    <option value="0x201">Button 2</option>
+    <option value="0x202">Button 3</option>
+    <option value="0x203">Button 4</option>
+    <option value="0x204">Button 5</option>
+    <option value="0x205">Button 6</option>
+    <option value="0x206">Button 7</option>
+    <option value="0x207">Button 8</option>
+    <option value="0x208">Button 9</option>
+    <option value="0x209">Button 10</option>
+    <option value="0x20a">Button 11</option>
+    <option value="0x20b">Button 12</option>
+    <option value="0x20c">Button 13</option>
+    <option value="0x20d">Button 14</option>
+    <option value="0x20e">Button 15</option>
+    <option value="0x20f">Button 16</option>
+    <option value="0x210">Button 17</option>
+    <option value="0x211">Button 18</option>
+    <option value="0x212">Button 19</option>
+    <option value="0x213">Button 20</option>
+    <option value="0x214">D-pad up</option>
+    <option value="0x215">D-pad Right</option>
+    <option value="0x216">D-pad down</option>
+    <option value="0x217">D-pad left</option>
+  </optgroup>
+  <optgroup label="Axis">
+    <option value="0x100">X+</option>
+    <option value="0x101">X-</option>
+    <option value="0x102">Y+</option>
+    <option value="0x103">Y-</option>
+    <option value="0x104">Z+</option>
+    <option value="0x105">Z-</option>
+    <option value="0x106">Rx+</option>
+    <option value="0x107">Rx-</option>
+    <option value="0x108">Ry+</option>
+    <option value="0x109">Ry-</option>
+    <option value="0x10a">Rz+</option>
+    <option value="0x10b">Rz-</option>
+    <option value="0x10c">Slider+</option>
+    <option value="0x10d">Slider-</option>
+    <option value="0x10e">Dial+</option>
+    <option value="0x10f">Dial-</option>
+  </optgroup>
+  </select>
+</div>
+<div id="mouse" class="teselect" style="display:none;">
+<select class="iselect">
+  <optgroup label="Button">
+      <option value="0x500">Left Button</option>
+      <option value="0x501">Right Button</option>
+      <option value="0x502">Middle Button</option>
+  </optgroup>
+  <optgroup label="axis">
+    <option value="0x401">Left</option>
+    <option value="0x400">Right</option>
+    <option value="0x403">Up</option>
+    <option value="0x402">Down</option>
+    <option value="0x405">Wheel Up</option>
+    <option value="0x404">Wheel Down</option>
+    <option value="0x407">pan left</option>
+    <option value="0x406">pan right</option>
+  </optgroup>
+</select>
+</div>
+<div id="kb" style="display:none;">
+<select class="iselect">
+<option value="0x329">ESCAPE</option>
+<option value="0x33a">F1</option>
+<option value="0x33b">F2</option>
+<option value="0x33c">F3</option>
+<option value="0x33d">F4</option>
+<option value="0x33e">F5</option>
+<option value="0x33f">F6</option>
+<option value="0x340">F7</option>
+<option value="0x341">F8</option>
+<option value="0x342">F9</option>
+<option value="0x343">F10</option>
+<option value="0x344">F11</option>
+<option value="0x345">F12</option>
+<option value="0x335">` ~</option>
+<option value="0x31e">1</option>
+<option value="0x31f">2</option>
+<option value="0x320">3</option>
+<option value="0x321">4</option>
+<option value="0x322">5</option>
+<option value="0x323">6</option>
+<option value="0x324">7</option>
+<option value="0x325">8</option>
+<option value="0x326">9</option>
+<option value="0x327">0</option>
+<option value="0x32d">- _</option>
+<option value="0x32e">= +</option>
+<option value="0x331">\ |</option>
+<option value="0x32a">Backspace</option>
+<option value="0x32b">Tab</option>
+<option value="0x314">Q</option>
+<option value="0x31a">W</option>
+<option value="0x308">E</option>
+<option value="0x315">R</option>
+<option value="0x317">T</option>
+<option value="0x31c">Y</option>
+<option value="0x318">U</option>
+<option value="0x30c">I</option>
+<option value="0x312">O</option>
+<option value="0x313">P</option>
+<option value="0x32f">[ {</option>
+<option value="0x330">] }</option>
+<option value="0x328">ENTER</option>
+<option value="0x339">Caps Lock</option>
+<option value="0x304">A</option>
+<option value="0x316">S</option>
+<option value="0x307">D</option>
+<option value="0x309">F</option>
+<option value="0x30a">G</option>
+<option value="0x30b">H</option>
+<option value="0x30d">J</option>
+<option value="0x30e">K</option>
+<option value="0x30f">L</option>
+<option value="0x333">; :</option>
+<option value="0x334">' &quot;</option>
+<option value="0x3e1">Left Shift</option>
+<option value="0x31d">Z</option>
+<option value="0x31b">X</option>
+<option value="0x306">C</option>
+<option value="0x319">V</option>
+<option value="0x305">B</option>
+<option value="0x311">N</option>
+<option value="0x310">M</option>
+<option value="0x336">, &lt;</option>
+<option value="0x337">. &gt;</option>
+<option value="0x338">/ ?</option>
+<option value="0x3e5">Right Shift</option>
+<option value="0x3e0">Left Ctrl</option>
+<option value="0x3e3">Left Win</option>
+<option value="0x3e2">Left Alt</option>
+<option value="0x32c">SPACE</option>
+<option value="0x3e6">Right Alt</option>
+<option value="0x3e7">Right Win</option>
+<option value="0x3e4">Right Ctrl</option>
+<option value="0x349">Insert</option>
+<option value="0x34a">Home</option>
+<option value="0x34b">Page Up</option>
+<option value="0x34c">Delete</option>
+<option value="0x34d">End</option>
+<option value="0x34e">Page Down</option>
+<option value="0x352">Up Arrow</option>
+<option value="0x34f">Right Arrow</option>
+<option value="0x351">Down Arrow</option>
+<option value="0x350">Left Arrow</option>
+<option value="0x346">Print Screen</option>
+<option value="0x347">Scroll Lock</option>
+<option value="0x348">Pause Break</option>
+<option value="0x353">Keypad Num Lock</option>
+<option value="0x354">Keypad /</option>
+<option value="0x355">Keypad *</option>
+<option value="0x356">Keypad -</option>
+<option value="0x35f">Keypad 7</option>
+<option value="0x360">Keypad 8</option>
+<option value="0x361">Keypad 9</option>
+<option value="0x357">Keypad +</option>
+<option value="0x35c">Keypad 4</option>
+<option value="0x35d">Keypad 5</option>
+<option value="0x35e">Keypad 6</option>
+<option value="0x359">Keypad 1</option>
+<option value="0x35a">Keypad 2</option>
+<option value="0x35b">Keypad 3</option>
+<option value="0x358">Keypad Enter</option>
+<option value="0x362">Keypad 0</option>
+<option value="0x363">Keypad . Delete</option>
+</select>
+</div>
+<div id="keyboard" title="Select one key" style="display:none; overflow:hidden">  
+	<div id="row0">
+		<button id="Esc" value="0x329" ></button>
+		<button id="F1" value="0x33a" ></button>
+		<button id="F2" value="0x33b" ></button>
+		<button id="F3" value="0x33c" ></button>
+		<button id="F4" value="0x33d" ></button>
+		<button id="F5" value="0x33e" ></button>
+		<button id="F6" value="0x33f" ></button>
+		<button id="F7" value="0x340" ></button>
+		<button id="F8" value="0x341" ></button>
+		<button id="F9" value="0x342" ></button>
+		<button id="F10" value="0x343" ></button>
+		<button id="F11" value="0x344" ></button>
+		<button id="F12" value="0x345" ></button>
+		<button id="PrintScreen" value="0x346" ></button>
+		<button id="ScrollLock" value="0x347" ></button>
+		<button id="Pause" value="0x348" ></button>
+	</div>
+	<div id="row1" >
+		<button id="accent" value="0x335" ></button>
+		<button id="d1" value="0x31e" ></button>
+		<button id="d2" value="0x31f" ></button>
+		<button id="d3" value="0x320" ></button>
+		<button id="d4" value="0x321" ></button>
+		<button id="d5" value="0x322" ></button>
+		<button id="d6" value="0x323" ></button>
+		<button id="d7" value="0x324" ></button>
+		<button id="d8" value="0x325" ></button>
+		<button id="d9" value="0x326" ></button>
+		<button id="d0" value="0x327" ></button>
+		<button id="-" value="0x32d" ></button>
+		<button id="=" value="0x32e" ></button>
+		<button id="|" value="0x331" ></button>
+		<button id="backspace" value="0x32a"></button>
+		<button id="insert" value="0x349"></button>
+		<button id="home" value="0x34a"></button>
+		<button id="PageUp" value="0x34b" style="margin-right:12px; "></button>
+		<button id="Numlock" value="0x353"></button>
+		<button id="keypad/" value="0x354"></button>
+		<button id="keypad*" value="0x355"></button>
+		<button id="keypad-" value="0x356"></button>
+	</div>
+	<div style="float:left; ">
+	<div id="row2">
+		<button id="tab" value="0x32b"></button>
+		<button id="Q" value="0x314"></button>
+		<button id="W" value="0x31a"></button>
+		<button id="E" value="0x308"></button>
+		<button id="R" value="0x315"></button>
+		<button id="T" value="0x317"></button>
+		<button id="Y" value="0x31c"></button>
+		<button id="U" value="0x318"></button>
+		<button id="I" value="0x30c"></button>
+		<button id="O" value="0x312"></button>
+		<button id="P" value="0x313"></button>
+		<button id="[{" value="0x32f"></button>
+		<button id="]}" value="0x330"></button>
+		<button id="Enter" value="0x328" style="width:53px;margin-right:12px ;" ></button>
+		<button id="Delete" value="0x34c"></button>
+		<button id="End" value="0x34d"></button>
+		<button id="PageDown" value="0x34e" style="margin-right:12px ;"></button>
+		<button id="keypad7" value="0x35f"></button>
+		<button id="keypad8" value="0x360"></button>
+		<button id="keypad9" value="0x361"></button>
+	</div>
+	<div id="row3">
+		<button id="CapsLock" type="button" value="0x339" ></button>
+		<button id="A" value="0x304"></button>
+		<button id="S" value="0x316"></button>
+		<button id="D" value="0x307"></button>
+		<button id="F" value="0x309"></button>
+		<button id="G" value="0x30a"></button>
+		<button id="H" value="0x30b"></button>
+		<button id="J" value="0x30d"></button>
+		<button id="K" value="0x30e"></button>
+		<button id="L" value="0x30f"></button>
+		<button id=";:" value="0x333"></button>
+		<button id="'&quot;" value="0x334"></button>
+		<button id="Enter" value="0x328" style="margin-right:122px"></button>
+		<button id="keypad4" value="0x35c"></button>
+		<button id="keypad5" value="0x35d"></button>
+		<button id="keypad6" value="0x35e"></button>
+	</div>	
+	</div>
+		<button id="keypad+" value="0x357" style="height:62px;" ></button>
+	<div style="float:left; ">
+	<div id="row4">
+		<button id="lShift" value="0x3e1"></button>
+		<button id="Z" type="button" value="0x31d"></button>
+		<button id="X" type="button" value="0x31b"></button>
+		<button id="C" type="button" value="0x306"></button>
+		<button id="V" type="button" value="0x319"></button>
+		<button id="B" type="button" value="0x305"></button>
+		<button id="N" type="button" value="0x311"></button>
+		<button id="M" type="button" value="0x310"></button>
+		<button id="lt" type="button" value="0x336"></button>
+		<button id="gt" type="button" value="0x337"></button>
+		<button id="/?" type="button" value="0x338"></button>
+		<button id="rShift" value="0x3e5" style="margin-right:76px "></button>
+		<button id="up" type="button" value="0x352" style="margin-right:44px "></button>
+		<button id="keypad1" value="0x359"></button>
+		<button id="keypad2" value="0x35a"></button>
+		<button id="keypad3" value="0x35b"></button>
+	</div>	
+	<div id="row5">
+		<button id="lCtrl" value="0x3e0"></button>
+		<button id="lWin" value="0x3e3"></button>
+		<button id="lAlt" value="0x3e2"></button>
+		<button id="spacebar" value="0x32c"></button>
+		<button id="rAlt" value="0x3e6"></button>
+		<button id="rWin" value="0x3e7"></button>
+		<button id="rCtrl" value="0x3e4" style="margin-right:10px " ></button>
+		<button id="left" type="button" value="0x350"></button>
+		<button id="down" type="button" value="0x351"></button>
+		<button id="right" type="button" value="0x34f" style="margin-right:10px"></button>
+		<button id="keypad0" value="0x362" style="width:62px;" ></button>
+		<button id="keypadDel" value="0x363" ></button>
+	</div>
+	</div>
+	<button id="keypadEnter" value="0x358" style="height:60px; "></button>	
+</div>
+<div id="XinputMacro" title="Macro Editor" style="background-color:#330066">
+<div id="XMacroEditor"></div>
+</div>
+<div id="del-confirm" title="Delete">These items will be permanently deleted and cannot be recovered. Are you sure?</div>
+<div id="del-forbid" title="delete forbid">This is the last config, can't delete it</div>
+<div id="rename" title="Rename">
+<p><label>Name:</label></p><p><input id="xname" style="width:400px; height:24px; font-size:18px" /></p>
+<p><label>Description:</label></p><p><input id="xdesc" style="width:400px; height:80px; font-size:18px" /></p>
+</div>
+<div id="message" title="Exception"></div>
+</div>
+<script type="text/javascript" src="misc/jquery.js" charset="UTF-8"></script>
+<script type="text/javascript" src="misc/common.js" charset="UTF-8"></script>
+<script type="text/javascript" src="misc/custom.js" charset="UTF-8"></script>
+</body>
+</html>
