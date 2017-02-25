@@ -2,11 +2,11 @@
 Use your PS3 Controller on your PC.  
 
 
-## Disclaimer:   
-This is **not the official MotioninJoy Repository**!  
-This version acts as an replacement for the official version which seems to not be maintained anymore and requires a connection to a now offline website (which makes it unusable).  
-**I am not the creator of this software or the drivers!**  
-This repository is just a place to host them and give unsage instructions.
+>### Disclaimer:   
+>This is **not the official MotioninJoy Repository**!  
+>This version acts as an replacement for the official version which seems to not be maintained anymore and requires a connection to a now offline website (which makes it unusable).  
+>**I am not the creator of this software or the drivers!**  
+>This repository is just a place to host them and give unsage instructions.
 
 
 ## How to use:
