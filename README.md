@@ -1,6 +1,7 @@
 # MotioninJoy Offline
 Use your PS3 Controller on your PC.  
 
+---
 
 ### Disclaimer:   
 >This is **not the official MotioninJoy Repository**!  
@@ -8,6 +9,7 @@ Use your PS3 Controller on your PC.
 >**I am not the creator of this software or the drivers!**  
 >This repository is just a place to host them and give unsage instructions.
 
+---
 
 ### How to use:
 1. Download this repository as a zip file or clone it.
